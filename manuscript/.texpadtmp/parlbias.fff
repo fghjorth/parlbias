@@ -1,0 +1,22 @@
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=.65]{../../figures/parlbias_dens}
+  \caption{Distribution of speech lengths by speaker-chairman copartisanship. The vertical line indicates the 60-second limit for short speeches. Non-copartisans drop off before reaching the limit. No such pattern is apparent for copartisans.}\label{parlbias_dens}
+
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=.65]{../../figures/parlbias_effectplot}
+  \caption{Estimated effect of copartisanship on speaking time (left panel) and probability of exceeding 60 seconds (right panel) for each of the five models estimated. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals. Logit model estimates represent marginal effects expressed in percentage points.}\label{parlbias_effectplot}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=.65]{../../figures/parlbias_modeffectplot}
+  \caption{Estimated effect of copartisanship on speaking time under various restrictions on political distance between chairman and speaker. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}\label{parlbias_modeffectplot}
+\end{figure}
+\efloatseparator
+ 
