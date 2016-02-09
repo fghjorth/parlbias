@@ -1,5 +1,7 @@
 require(dplyr)
 require(magrittr)
+require(reshape2)
+require(lubridate)
 
 #win
 setwd("C:/Users/fh/Documents/GitHub/parlbias/rawdata")
@@ -137,30 +139,34 @@ rawcontent<-as.character(ft14to15$rawcontent[-wrongstamps])
 ft14to15df<-data.frame(field=c(rep(fields,length(rawcontent)/length(fields))),content=rawcontent)
 
 #cast to wide form 
-require(reshape2)
-ft14to15$obs<-sort(rep(1:(nrow(ft14to15)/length(fields)),length(fields)))
-ft14to15<-dcast(ft14to15,obs~field,value.var="content")
+
+ft14to15df$obs<-sort(rep(1:(nrow(ft14to15df)/length(fields)),length(fields)))
+ft14to15df<-dcast(ft14to15df,obs~field,value.var="content")
+
 
 
 #reformat non-ascii letters - we need this for later
-ft14to15$fullname<-paste(ft14to15$firstname,ft14to15$lastname)
-Encoding(ft14to15$fullname)<-"UTF-8"
+ft14to15df$fullname<-paste(ft14to15df$firstname,ft14to15df$lastname)
 
-ft14to15$fullname<-gsub("æ","ae",ft14to15$fullname)
-ft14to15$fullname<-gsub("ø","oe",ft14to15$fullname)
-ft14to15$fullname<-gsub("å","aa",ft14to15$fullname)
-ft14to15$fullname<-gsub("Æ","Ae",ft14to15$fullname)
-ft14to15$fullname<-gsub("Ø","Oe",ft14to15$fullname)
-ft14to15$fullname<-gsub("Å","Aa",ft14to15$fullname)
+unique(as.character(ft14to15df$fullname))
 
-#save data
-ft14to15<-data.frame(fullname=ft14to15$fullname,
-                 party=ft14to15$party,
-                 starttime=ymd_hms(ft14to15$starttime),
-                 endtime=ymd_hms(ft14to15$endtime),
-                 chair=ifelse(ft14to15$title=="formand",1,0))
+ft14to15df$fullname<-gsub("Ã¦","ae",ft14to15df$fullname) %>%
+  gsub("Ã¸","oe",.) %>%
+  gsub("Ã©","e",.) %>%
+  gsub("Ã˜","Oe",.) %>%
+  gsub("Ãº","u",.) %>%
+  gsub("Ã°","d",.)
+  
+unique(as.character(ft14to15df$fullname))
 
-saveRDS(ft14to15,file="../data/ft14to15.rds")
+#save data in same format as previous years
+ft14to15df<-data.frame(fullname=ft14to15df$fullname,
+                 party=ft14to15df$party,
+                 starttime=ymd_hms(ft14to15df$starttime),
+                 endtime=ymd_hms(ft14to15df$endtime),
+                 chair=ifelse(ft14to15df$title=="formand",1,0))
+
+saveRDS(ft14to15df,file="../data/ft14to15.rds")
 
 
 # #parse html documents
