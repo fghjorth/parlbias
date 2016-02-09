@@ -1,16 +1,28 @@
+require(lubridate)
+require(dplyr)
+require(magrittr)
+require(ggplot2)
+require(reshape2)
+require(stargazer)
+require(readr)
+require(zoo)
+
 #win
-#setwd("C:/Users/fh/Documents/GitHub/thesis/data")
+#setwd("C:/Users/fh/Documents/GitHub/parlbias/data")
 #mac
-setwd("~/GitHub/thesis/data")
+setwd("~/GitHub/parlbias/data")
 
 #read in data
-ft<-rbind(readRDS(file="ft10to13.rds"),readRDS(file="ft14.rds"))
+ft<-rbind(readRDS(file="ft10to13.rds"),readRDS(file="ft14to15.rds"))
 
 #clean up data a bit
 #assign PM's to parties
 table(ft$party)
 ft$party[substr(as.character(ft$party),1,22)=="Helle Thorning-Schmidt"]<-"S"
+ft$party[substr(as.character(ft$fullname),1,22)=="Helle Thorning-Schmidt"]<-"S"
 ft$party[ft$party=="Lars Loekke Rasmussen"]<-"V"
+ft$party[ft$fullname=="Lars Loekke Rasmussen"]<-"V"
+ft$party<-as.character(ft$party)
 table(ft$party)
 
 #measure of seconds
@@ -27,9 +39,10 @@ ft$chairparty<-ifelse(ft$chair==1,as.character(ft$party),NA)
 ft$chairname<-ifelse(ft$chair==1,as.character(ft$fullname),NA)
 
 #fill in empty slots
-require(zoo)
 ft$chairparty<-na.locf(ft$chairparty)
 ft$chairname<-na.locf(ft$chairname)
+
+
 
 #variable for whether the speaker is ingroup wrt the chairman
 ft$copartisan<-ifelse(as.character(ft$party)==ft$chairparty,1,0)
@@ -43,19 +56,17 @@ ft$copartisan<-ifelse(ft$chair==1,NA,ft$copartisan)
 #   theme_bw()
 
 #get time of day
-require(lubridate)
 ft$timeofday<-hour(ft$starttime)+minute(ft$starttime)/60+second(ft$starttime)/3600
 ft$timeofday<-ifelse(ft$timeofday<8,ft$timeofday+24,ft$timeofday)
 summary(ft$timeofday)
 
-require(ggplot2)
+#speech length by time of day
 ggplot(ft,aes(x=timeofday,y=secs)) +
   geom_point(alpha=.2) +
   geom_smooth() +
   theme_bw()
 
 #dummy for whether speaker party is in parl. leadership ("pr?sidiet")
-
 ft$leadshipparty<-ifelse(ft$party %in% names(table(ft$chairparty)),1,0)
 table(ft$party[ft$leadshipparty==1])
 
@@ -72,10 +83,11 @@ ft$fullname[ft$fullname==pmfullnames[1]]<-"Helle Thorning-Schmidt"
 ft$fullname[ft$fullname==pmfullnames[2]]<-"Lars Loekke Rasmussen"
 ft$fullname[ft$fullname==pmfullnames[3]]<-"Helle Thorning-Schmidt"
 
+
+
+
 #get parties placements from voter estimates in most recent election survey
 FV11<-read.csv("../rawdata/ElectionStudy-2011_F1.csv",sep=",",dec=".")
-require(dplyr)
-require(reshape2)
 FV11<-FV11 %>%
   select(num_range("v",228:235)) %>%
   melt() %>%
@@ -119,6 +131,15 @@ ft$cobloc[ft$chair==1]<-NA
 ft$debatetype<-"Closing"
 ft$debatetype[month(ft$starttime)==10]<-"Opening"
 
+#factor for specific debate
+names(ft)
+ft<-ft %>%
+  mutate(debate=paste(debatetype,year(starttime),sep=" "))
+table(ft$debate)
+
+#three odd time stamps (all chairmen, so no effect on results)
+subset(ft,debate=="Closing 1900")
+
 #read in background data on politicians
 require(XML)
 pols<-xmlParse("http://hvemstemmerhvad.dk/api/api_politikere.php")
@@ -130,29 +151,59 @@ pols$fullname<-gsub("å","aa",pols$fullname)
 pols$fullname<-gsub("Æ","Ae",pols$fullname)
 pols$fullname<-gsub("Ø","Oe",pols$fullname)
 pols$fullname<-gsub("Å","Aa",pols$fullname)
-
 #add in gender variable
 pols$female<-as.numeric(read.table("../rawdata/polsgenders.txt")$V1)
+pols<-select(pols,fullname,female)
+
+polsgenders<-data.frame(fullname=unique(ft$fullname)) %>%
+  left_join(.,pols,by="fullname")
+
+# #export the gender data frame so I can edit it manually
+# write_csv(polsgenders,"../rawdata/polsgenders2.csv")
+
+#read back in edited polsgenders
+polsgenders2<-read_csv("../rawdata/polsgenders2.csv")
 
 #merge in
-ft<-merge(ft,pols[,c(8,15,16)],by="fullname",all.x=T)
+ft<-left_join(ft,polsgenders2,by="fullname")
 
-#calculate age in years at time of speaking
-ft$speakerage<-(year(ft$starttime)+month(ft$starttime)/12)-(year(ymd(ft$birthday))+month(ymd(ft$birthday))/12)  
+# #calculate age in years at time of speaking
+# ft$speakerage<-(year(ft$starttime)+month(ft$starttime)/12)-(year(ymd(ft$birthday))+month(ymd(ft$birthday))/12)  
 
 
 #remove long speeches
 ftall<-ft
-ft<-subset(ft,secs<150 & year(starttime)>2000)
-ft<-ft[order(ft$starttime),]
+
+saveRDS(ftall,"ftall.rds")
+
+ftall<-readRDS("ftall.rds")
+
+ft<-subset(ftall,secs<150 & secs>10 & year(starttime)>2000)
+ft<-arrange(ft,starttime)
+
+
+#check sample of data
+sample_n(ft,30)
+
+ggplot(subset(ft,chair==0),aes(x=secs)) + geom_density()
+
+ggplot(ft,aes(x=timeofday,y=secs)) + geom_point() + facet_grid(debate~.)
+
+View(subset(ft,debate=="Opening 2015" & copartisan!=0))  
 
 ### TABLES
 
 summary(m1<-lm(secs~copartisan,data=ft))
-summary(m2<-lm(secs~copartisan+pm+timeofday,data=ft))
-summary(m3<-lm(secs~copartisan+pm+timeofday+debatetype+female+speakerage,data=ft))
-summary(m4<-lm(secs~copartisan+pm+timeofday+debatetype+female+speakerage+factor(coarseparty)+factor(chairparty),data=ft))
-summary(m5<-lm(secs~copartisan+pm+timeofday+debatetype+female+speakerage+factor(coarseparty)+factor(chairparty),data=subset(ft,leadshipparty==1)))
+summary(m2<-lm(secs~copartisan+timeofday,data=ft))
+summary(m3<-lm(secs~copartisan+timeofday+female,data=ft))
+summary(m4<-lm(secs~copartisan+timeofday+female+factor(chairparty),data=ft))
+summary(m5<-lm(secs~copartisan+timeofday+female+factor(coarseparty),data=ft))
+summary(m6<-lm(secs~copartisan+timeofday+female+debate,data=ft))
+summary(m7<-lm(secs~copartisan+timeofday+female+factor(coarseparty),data=subset(ft,leadshipparty==1)))
+
+stargazer(m1,m2,m3,m4,m5,m6,m7,type="text",omit=c("factor","debate"),omit.stat=c("f","ser"))
+stargazer(m1,m2,m3,m4,m5,m6,m7,type="text",omit=c("debate"),omit.stat=c("f","ser"))
+
 
 summary(m4intposdifltmedian<-lm(secs~copartisan+pm+timeofday+debatetype+female+speakerage+factor(coarseparty)+factor(chairparty),data=subset(ft,intposdif<=2.34)))
 
@@ -309,7 +360,7 @@ ggsave(file="../figures/parlbias_modeffectplot.pdf",height=4,width=9)
 ft$copartisan_factor<-factor(ft$copartisan,labels=c("Non-copartisan","Co-partisan"))
 ft$copartisan_factor<-factor(ft$copartisan_factor,levels(ft$copartisan_factor)[c(2,1)])
 
-ggplot(subset(ft,chair==0 & !is.na(copartisan) & leadshipparty==1 & timeofday>13),aes(x=secs)) +
+ggplot(subset(ft,chair==0 & !is.na(copartisan)),aes(x=secs)) +
   geom_density(fill="gray",alpha=.5) +
   facet_grid(.~copartisan_factor) +
   geom_vline(xintercept=60,linetype="dashed") +
