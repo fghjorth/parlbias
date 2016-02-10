@@ -1,0 +1,19 @@
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: on, feb 10, 2016 - 17:21:56
+% Requires LaTeX packages: dcolumn
+\begin{table}[!htbp] \centering
+  \caption{Types of speeches in opening and closing debates in the Folketing}
+  \label{parlbias_sumstatstab}
+\footnotesize
+\begin{tabular}{@{\extracolsep{5pt}} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} }
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+\multicolumn{1}{l}{Type} & \multicolumn{1}{r}{Number} & \multicolumn{1}{r}{Share (numeric)} & \multicolumn{1}{r}{Share (time-weighted)} \\
+\hline \\[-1.8ex]
+\multicolumn{1}{l}{Brief remark} & \multicolumn{1}{l}{5854} & \multicolumn{1}{l}{97.37} & \multicolumn{1}{l}{82.63} \\
+\multicolumn{1}{l}{PM speech} & \multicolumn{1}{l}{11} & \multicolumn{1}{l}{0.18} & \multicolumn{1}{l}{0.86} \\
+\multicolumn{1}{l}{Spokesperson speech} & \multicolumn{1}{l}{147} & \multicolumn{1}{l}{2.45} & \multicolumn{1}{l}{16.5} \\ 
+\hline \\[-1.8ex]
+\end{tabular}
+\end{table}

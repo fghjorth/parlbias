@@ -1,0 +1,105 @@
+\begin{table}[!htbp] \centering
+  \caption{Types of speeches in opening and closing debates in the Folketing}
+  \label{parlbias_sumstatstab}
+\footnotesize
+\begin{tabular}{@{\extracolsep{5pt}} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} }
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+\multicolumn{1}{l}{Type} & \multicolumn{1}{r}{Number} & \multicolumn{1}{r}{Share (numeric)} & \multicolumn{1}{r}{Share (time-weighted)} \\
+\hline \\[-1.8ex]
+\multicolumn{1}{l}{Brief remark} & \multicolumn{1}{l}{5854} & \multicolumn{1}{l}{97.3719228210246} & \multicolumn{1}{l}{82.6341319524106} \\
+\multicolumn{1}{l}{PM speech} & \multicolumn{1}{l}{11} & \multicolumn{1}{l}{0.182967398536261} & \multicolumn{1}{l}{0.861437951339954} \\
+\multicolumn{1}{l}{Spokesperson speech} & \multicolumn{1}{l}{147} & \multicolumn{1}{l}{2.44510978043912} & \multicolumn{1}{l}{16.5044300962494} \\
+\hline \\[-1.8ex]
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
+\begin{table}[!htbp] \centering
+  \caption{OLS models of speaking time}
+  \label{parlbias_regtab1}
+\footnotesize
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} }
+\\[-1.8ex]\hline \\[-1.8ex]
+\\[-1.8ex] & \multicolumn{5}{c}{Speaking time (seconds)} \\
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)}\\
+\hline \\[-1.8ex]
+ Copartisan & 3.29^{***} & 3.14^{***} & 3.69^{***} & 2.57^{***} & 1.65^{***} \\
+  & (0.93) & (1.03) & (0.86) & (0.93) & (0.53) \\
+  Time of day &  & -0.02 & 0.0002 & -0.13 & -0.08 \\
+  &  & (0.18) & (0.18) & (0.13) & (0.14) \\
+  Gender (female) &  & 1.12 & 0.85 & 0.53 & 0.11 \\
+  &  & (0.77) & (0.79) & (0.51) & (0.58) \\
+  Intercept & 51.81^{***} & 51.61^{***} & 52.53^{***} & 60.58^{***} & 47.65^{***} \\
+  & (0.92) & (3.02) & (4.51) & (3.16) & (3.89) \\
+ N & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} \\
+Speaker party fixed effects & & & $\checkmark$ & & $\checkmark$ \\
+Chair party fixed effects & & & $\checkmark$ & & $\checkmark$ \\
+Debate fixed effects & & & & $\checkmark$ & $\checkmark$ \\
+R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.03} & \multicolumn{1}{c}{0.09} & \multicolumn{1}{c}{0.12} \\
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.005} & \multicolumn{1}{c}{0.02} & \multicolumn{1}{c}{0.09} & \multicolumn{1}{c}{0.12} \\
+\hline \\[-1.8ex]
+\multicolumn{6}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
+\begin{table}[!htbp] \centering
+  \caption{Logit models of exceeding standard speaking time}
+  \label{parlbias_regtab1logit}
+\footnotesize
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} }
+\\[-1.8ex]\hline \\[-1.8ex]
+\\[-1.8ex] & \multicolumn{5}{c}{Dummy: speaking time exceeds 60 seconds} \\
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)}\\
+\hline \\[-1.8ex]
+ Copartisan & 0.24^{***} & 0.23^{***} & 0.20^{**} & 0.18^{**} & 0.11 \\
+  & (0.07) & (0.07) & (0.08) & (0.07) & (0.08) \\
+  Time of day &  & 0.004 & 0.01^{*} & -0.01 & 0.0000 \\
+  &  & (0.01) & (0.01) & (0.01) & (0.01) \\
+  Gender (female) &  & 0.16^{***} & 0.10 & 0.11^{*} & 0.05 \\
+  &  & (0.06) & (0.06) & (0.06) & (0.06) \\
+  Intercept & -0.60^{***} & -0.74^{***} & -2.90^{***} & 0.09 & -1.54^{**} \\
+  & (0.03) & (0.12) & (0.74) & (0.15) & (0.76) \\
+ N & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} \\
+Speaker party fixed effects & & & $\checkmark$ & & $\checkmark$ \\
+Chair party fixed effects & & & $\checkmark$ & & $\checkmark$ \\
+Debate fixed effects & & & & $\checkmark$ & $\checkmark$ \\
+Log Likelihood & \multicolumn{1}{c}{-3,767.39} & \multicolumn{1}{c}{-3,763.18} & \multicolumn{1}{c}{-3,647.82} & \multicolumn{1}{c}{-3,551.40} & \multicolumn{1}{c}{-3,470.04} \\
+AIC & \multicolumn{1}{c}{7,538.78} & \multicolumn{1}{c}{7,534.35} & \multicolumn{1}{c}{7,335.63} & \multicolumn{1}{c}{7,128.79} & \multicolumn{1}{c}{6,998.08} \\
+\hline \\[-1.8ex]
+\multicolumn{6}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
+\begin{table}[!htbp] \centering
+  \caption{Tests of political moderators}
+  \label{parlbias_regtabmods}
+\footnotesize
+\begin{tabular}{@{\extracolsep{0pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} }
+\\[-1.8ex]\hline \\[-1.8ex]
+\\[-1.8ex] & \multicolumn{4}{c}{Speaking time (seconds)} \\
+ & \multicolumn{1}{c}{Full} & \multicolumn{1}{c}{Distance$\leq$median (int.)} & \multicolumn{1}{c}{Distance$\leq$median (ord.)} & \multicolumn{1}{c}{Same bloc} \\
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\
+\hline \\[-1.8ex]
+ Copartisan & 1.65^{**} & 0.54 & 0.65 & 0.23 \\
+  & (0.70) & (0.96) & (0.95) & (0.97) \\
+  Time of day & -0.08 & -0.06 & -0.07 & -0.07 \\
+  & (0.06) & (0.09) & (0.09) & (0.09) \\
+  Gender (female) & 0.11 & -2.09^{**} & -1.34^{*} & -1.05 \\
+  & (0.53) & (0.81) & (0.78) & (0.78) \\
+  Intercept & 47.65^{***} & 72.10^{***} & 71.11^{***} & 50.02^{***} \\
+  & (3.28) & (2.37) & (2.30) & (3.88) \\
+ N & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{2,853} & \multicolumn{1}{c}{2,987} & \multicolumn{1}{c}{2,950} \\
+Speaker party fixed effects & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+Chair party fixed effects & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+Debate fixed effects & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+R$^{2}$ & \multicolumn{1}{c}{0.12} & \multicolumn{1}{c}{0.13} & \multicolumn{1}{c}{0.14} & \multicolumn{1}{c}{0.14} \\
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.12} & \multicolumn{1}{c}{0.12} & \multicolumn{1}{c}{0.13} & \multicolumn{1}{c}{0.13} \\
+\hline \\[-1.8ex]
+\multicolumn{5}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\
+\end{tabular}
+\end{table}
+\efloatseparator
+ 

@@ -1,0 +1,9 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: parlbias_revised.aux
+The style file: ../../thesis/bibliography/model2-names.bst
+Illegal, another \bibstyle command---line 62 of file parlbias_revised.aux
+ : \bibstyle
+ :          {chicago}
+I'm skipping whatever remains of this command
+Database file #1: ../../thesis/bibliography/library.bib
+Warning--empty booktitle in Tajfel1986
+(There was 1 error message)

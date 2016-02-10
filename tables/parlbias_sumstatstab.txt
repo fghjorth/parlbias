@@ -1,12 +1,12 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: on, feb 10, 2016 - 14:17:54
+% Date and time: on, feb 10, 2016 - 17:21:56
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{Types of speeches in opening and closing debates in the Folketing} 
   \label{parlbias_sumstatstab} 
 \footnotesize 
-\begin{tabular}{@{\extracolsep{5pt}} D{.}{.}{-1} D{.}{.}{-1} D{.}{.}{-1} D{.}{.}{-1} } 
+\begin{tabular}{@{\extracolsep{5pt}} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
 \multicolumn{1}{l}{Type} & \multicolumn{1}{r}{Number} & \multicolumn{1}{r}{Share (numeric)} & \multicolumn{1}{r}{Share (time-weighted)} \\ 

@@ -1,6 +1,6 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: on, feb 10, 2016 - 14:09:55
+% Date and time: on, feb 10, 2016 - 16:47:53
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{OLS models of speaking time} 
@@ -11,20 +11,20 @@
 \\[-1.8ex] & \multicolumn{5}{c}{Speaking time (seconds)} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)}\\ 
 \hline \\[-1.8ex] 
- Copartisan & 3.23^{***} & 3.05^{***} & 2.37^{***} & 2.49^{***} & 1.37^{**} \\ 
-  & (1.00) & (1.09) & (0.76) & (0.94) & (0.57) \\ 
-  Time of day &  & -0.04 & 0.02 & -0.15 & -0.11 \\ 
-  &  & (0.18) & (0.19) & (0.13) & (0.14) \\ 
-  Gender (female) &  & 1.19 & 0.65 & 0.63 & 0.16 \\ 
-  &  & (0.80) & (0.76) & (0.52) & (0.58) \\ 
-  Intercept & 51.31^{***} & 51.48^{***} & 36.16^{***} & 60.76^{***} & 48.06^{***} \\ 
-  & (0.94) & (3.04) & (4.99) & (3.11) & (3.84) \\ 
- N & \multicolumn{1}{c}{5,824} & \multicolumn{1}{c}{5,824} & \multicolumn{1}{c}{5,824} & \multicolumn{1}{c}{5,824} & \multicolumn{1}{c}{5,824} \\ 
-Speaker party fixed effects & & & \checkmark & & \checkmark \\
-Chair party fixed effects & & & \checkmark & & \checkmark \\
-Debate fixed effects & & & & \checkmark & \checkmark \\
-R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.005} & \multicolumn{1}{c}{0.05} & \multicolumn{1}{c}{0.09} & \multicolumn{1}{c}{0.12} \\ 
-Adjusted R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.05} & \multicolumn{1}{c}{0.09} & \multicolumn{1}{c}{0.12} \\ 
+ Copartisan & 3.29^{***} & 3.14^{***} & 3.69^{***} & 2.57^{***} & 1.65^{***} \\ 
+  & (0.93) & (1.03) & (0.86) & (0.93) & (0.53) \\ 
+  Time of day &  & -0.02 & 0.0002 & -0.13 & -0.08 \\ 
+  &  & (0.18) & (0.18) & (0.13) & (0.14) \\ 
+  Gender (female) &  & 1.12 & 0.85 & 0.53 & 0.11 \\ 
+  &  & (0.77) & (0.79) & (0.51) & (0.58) \\ 
+  Intercept & 51.81^{***} & 51.61^{***} & 52.53^{***} & 60.58^{***} & 47.65^{***} \\ 
+  & (0.92) & (3.02) & (4.51) & (3.16) & (3.89) \\ 
+ N & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} \\ 
+Speaker party fixed effects & & & $\checkmark$ & & $\checkmark$ \\
+Chair party fixed effects & & & $\checkmark$ & & $\checkmark$ \\
+Debate fixed effects & & & & $\checkmark$ & $\checkmark$ \\
+R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.03} & \multicolumn{1}{c}{0.09} & \multicolumn{1}{c}{0.12} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.005} & \multicolumn{1}{c}{0.02} & \multicolumn{1}{c}{0.09} & \multicolumn{1}{c}{0.12} \\ 
 \hline \\[-1.8ex] 
 \multicolumn{6}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
 \end{tabular} 
