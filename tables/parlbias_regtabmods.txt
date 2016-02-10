@@ -1,0 +1,33 @@
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: on, feb 10, 2016 - 14:14:22
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{Tests of political moderators} 
+  \label{parlbias_regtabmods} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} } 
+\\[-1.8ex]\hline \\[-1.8ex] 
+\\[-1.8ex] & \multicolumn{1}{c}{Speaking time (seconds)} & \multicolumn{3}{c}{secs} \\ 
+ & \multicolumn{1}{c}{Full} & \multicolumn{1}{c}{Distance$\leq$median (int.)} & \multicolumn{1}{c}{Distance$\leq$median (ord.)} & \multicolumn{1}{c}{Same bloc} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+\hline \\[-1.8ex] 
+ Copartisan & 1.37^{*} & 0.43 & 0.49 & -0.01 \\ 
+  & (0.72) & (0.99) & (0.97) & (1.00) \\ 
+  Time of day & -0.11^{*} & -0.11 & -0.13 & -0.13 \\ 
+  & (0.06) & (0.09) & (0.09) & (0.09) \\ 
+  Gender (female) & 0.16 & -2.28^{***} & -1.45^{*} & -0.97 \\ 
+  & (0.54) & (0.83) & (0.80) & (0.80) \\ 
+  Intercept & 48.06^{***} & 72.84^{***} & 71.84^{***} & 51.23^{***} \\ 
+  & (3.36) & (2.42) & (2.36) & (3.99) \\ 
+ N & \multicolumn{1}{c}{5,824} & \multicolumn{1}{c}{2,891} & \multicolumn{1}{c}{3,027} & \multicolumn{1}{c}{2,991} \\ 
+Speaker party fixed effects & & & \checkmark & & \checkmark \\
+Chair party fixed effects & & & \checkmark & & \checkmark \\
+Debate fixed effects & & & & \checkmark & \checkmark \\
+R$^{2}$ & \multicolumn{1}{c}{0.12} & \multicolumn{1}{c}{0.13} & \multicolumn{1}{c}{0.14} & \multicolumn{1}{c}{0.14} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.12} & \multicolumn{1}{c}{0.12} & \multicolumn{1}{c}{0.13} & \multicolumn{1}{c}{0.13} \\ 
+Residual Std. Error & \multicolumn{1}{c}{18.62 (df = 5794)} & \multicolumn{1}{c}{18.91 (df = 2864)} & \multicolumn{1}{c}{18.79 (df = 3000)} & \multicolumn{1}{c}{18.96 (df = 2963)} \\ 
+\hline \\[-1.8ex] 
+\multicolumn{5}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
+\end{tabular} 
+\end{table} 

@@ -109,7 +109,7 @@ two possibilities:
 
 R4 says (2) does not imply unequal enforcement. discuss.
 
-### 4.2: Unexploited information  
+### 4.2: Unexploited information about effect heterogeneity
 
 is bias consistent across parties? coefficient masks a lot of heterogeneity
 

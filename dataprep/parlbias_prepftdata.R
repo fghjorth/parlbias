@@ -71,7 +71,7 @@ ft$leadshipparty<-ifelse(ft$party %in% names(table(ft$chairparty)),1,0)
 table(ft$party[ft$leadshipparty==1])
 
 #create simpler party variable
-ft$coarseparty<-ifelse(ft$party %in% c("IA","JF","SIU","SP","T","TF","KD"),"Other",ft$party)
+ft$coarseparty<-ifelse(ft$party %in% c("IA","JF","SIU","SP","T","TF","KD","UFG"),"Other",ft$party)
 
 #is the pm speaking?
 subset(ft,substr(ft$fullname,1,nchar("Statsministeren"))=="Statsministeren")
