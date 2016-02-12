@@ -1,6 +1,6 @@
 \begin{figure}[!htbp]
 \centering
-\includegraphics[scale=.65]{../figures/parlbias_dens}
+\includegraphics[scale=.75]{../figures/parlbias_dens}
   \caption{Distribution of speech lengths by speaker-chairman copartisanship. The vertical line indicates the 60-second limit for short speeches. Non-copartisans drop off before reaching the limit. No such pattern is apparent for copartisans.}\label{parlbias_dens}
 
 \end{figure}

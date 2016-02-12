@@ -1,6 +1,6 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: on, feb 10, 2016 - 17:21:56
+% Date and time: to, feb 11, 2016 - 10:19:18
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{Types of speeches in opening and closing debates in the Folketing} 

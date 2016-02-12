@@ -16,14 +16,18 @@
 \usepackage{lmodern}
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage[top=1.5in, bottom=1.5in, left=1in, right=1in]{geometry}
-\usepackage{endnotes}
-\let\footnote=\endnote
-\usepackage[heads,nolists,tablesfirst]{endfloat} %places tables and figures at the end
+
+%%% these three may have to be commented back in when submitting
+%\usepackage{endnotes}
+%\let\footnote=\endnote
+%\usepackage[heads,nolists,tablesfirst]{endfloat} %places tables and figures at the end
+
 \usepackage{mathptmx}
 \usepackage{soul}
 \usepackage{color}
 \usepackage{hyperref}
 \usepackage[font={footnotesize}]{caption}
+%\usepackage{adjustbox} %for centering tables
 
 
 \title{ \textbf{Intergroup Bias \\ in Parliamentary Rule Enforcement}  }
@@ -69,7 +73,7 @@
 
 \noindent In a variety of contexts, institutions accord individuals formal roles which require them to enforce rules governing the competing interest of societal groups. In some cases, by either design or necessity, these individuals are drawn from one of the groups subject to these rules. Hence, in order to enforce the rules in an unbiased manner, assuming the role requires the individual to disregard his or her group loyalties. 
 
-But are such institutional roles and norms likely to be successful? In this study, we exploit a natural experiment in rule enforcement where the enforcer belongs to a group subject to enforcement. The empirical setting is parliamentary debates in Denmark, in which speaking times, governed by a simple, uniform rule, are enforced by chairmen drawn from major political parties.\footnote{In the interest of fluency, the paper refers to both chairmen and -women using male pronouns, reflecting the model speaker gender.} Since combinations of speakers and chairmen are effectively random, the setting allows for identifying whether chairmen disregard partisan loyalties in enforcing speaking time rules.
+But are such institutional roles and norms likely to be successful? In this study, we exploit a natural experiment in rule enforcement where the enforcer belongs to a group subject to enforcement. The empirical setting is parliamentary debates in Denmark, in which speaking times, governed by a simple, uniform rule, are enforced by chairmen drawn from major political parties.\footnote{In the interest of fluency, the paper refers to both chairmen and -women using male pronouns, reflecting the modal speaker gender.} Since combinations of speakers and chairmen are effectively random, the setting allows for identifying whether chairmen disregard partisan loyalties in enforcing speaking time rules.
 
 %Partisanship is a pervasive force in political life. Independent of the political role played by parties themselves, individuals' psychological attachments to parties shape factual perceptions, attitudes, and political behavior. This perspective emphasizing partisanship as a psychological attachment over formal membership of political parties has naturally dominated scholarship in the United States, where party organizations are comparatively weak. 
 
@@ -165,7 +169,7 @@ Where $SpeechLength_i$ is an either continuous or dichotomous measure of the len
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[scale=.65]{../figures/parlbias_dens}
+\includegraphics[scale=.75]{../figures/parlbias_dens}
   \caption{Distribution of speech lengths by speaker-chairman copartisanship. The vertical line indicates the 60-second limit for short speeches. Non-copartisans drop off before reaching the limit. No such pattern is apparent for copartisans.}\label{parlbias_dens}
 
 \end{figure}
@@ -175,8 +179,6 @@ The pattern is evident: the frequency of non-copartisan speeches drops markedly 
 Table \ref{parlbias_regtab1} presents estimations of various specifications of equation \ref{model}. Model 1 presents a bivariate regression of speech length on copartisanship; models 2-5 add various controls. Across all model specifications, the estimated effect of copartisanship is robustly significant and in the predicted direction. 
 
 \input{../tables/parlbias_regtab1.txt}
-
-
 
 The results thus support the hypothesis that copartisanship is associated with longer speeches. The estimated effect of copartisanship ranges from 3.5 additional seconds (without any controls) to 2.8 seconds (with party fixed effects). In absolute terms, the estimated effects thus seem fairly small, but the effect is equivalent to an appreciable `copartisanship premium' of around 5 percent of the expected speech length.
 
@@ -233,11 +235,6 @@ However, this empirical result is not necessarily highly informative of the meri
 
 Figure \ref{parlbias_chairranfefs} shows effects estimated separately for each chairman in the data.
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[scale=.55]{../figures/parlbias_chairranefs}
-  \caption{Effects of copartisanship estimated separately for each chairman in the data. Estimates are drawn from a random effects model corresponding to model 3 in Table 2 with varying slopes for individual chairmen. The grey dashed vertical line shows the average copartisanship effect (i.e., the fixed effect). Chairmen are ordered top to bottom according to party ordinal left/right ranking and within parties according to estimated effect. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}\label{parlbias_chairranfefs}
-\end{figure}
 
 \section{Conclusion}\label{conc}
 
@@ -261,7 +258,7 @@ To be sure, the distinction between these two mechanisms is not necessarily a pe
 \parindent 0pt
 \parskip 2ex
 \def\enotesize{\normalsize}
-\theendnotes
+%\theendnotes %from endnotes package
 \endgroup
 
 \clearpage
@@ -271,5 +268,30 @@ To be sure, the distinction between these two mechanisms is not necessarily a pe
 \bibliographystyle{../../thesis/bibliography/model2-names}
 \bibliographystyle{chicago}
 \bibliography{../../thesis/bibliography/library}
+
+\appendix
+
+\section{Appendix}
+
+\subsection{Predicting chairman activity}\label{appact}
+
+\input{../tables/parlbias_remarksregtab.txt}
+
+\clearpage
+\subsection{Robustness checks of main results}\label{approbust}
+
+\input{../tables/parlbias_regtabrs.txt}
+
+\input{../tables/parlbias_regtabdfe.txt}
+
+\clearpage
+\subsection{Effect heterogeneity across chairmen}\label{appchairranef}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=.55]{../figures/parlbias_chairranefs}
+  \caption{Effects of copartisanship estimated separately for each chairman in the data. Estimates are drawn from a random effects model corresponding to model 3 in Table 2 with varying slopes for individual chairmen. The grey dashed vertical line shows the average copartisanship effect (i.e., the fixed effect). Chairmen are ordered top to bottom according to party ordinal left/right ranking and within parties according to estimated effect. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}\label{parlbias_chairranfefs}
+\end{figure}
+
 
 \end{document}
