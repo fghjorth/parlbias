@@ -72,49 +72,57 @@ do chairmen call on more people from his/her own party? add discussion about thi
 
 ### 2.4: Discuss the odd shape of Figure 2
 
-I really don't know how to handle this
+Lastly, R2 points to the somewhat puzzling bimodal shape of the distribution of non-copartisan response times shown in Figure 2. The shape already receives some discussion in the text, but as R2 rightly points out, it is not quite the shape one would expect given just some average bias by chairmen.
+
+To explore this issue further, I have changed the figure to present the distribution for non-copartisans separately for members of the chairman's own parliamentary bloc and for members of the other bloc. The revised figure is shown below.
+
+\includegraphics{../figures/parlbias_dens.pdf}
 
 The pattern suggests some of the difference reflects self-censorship.
 
 ## Reviewer 3
 
-### 3.1: Partisanship as a 'soft' test
+### 3.1: Analysis of distinction between rational choice and social identity processes
 
-explain why minimal groups wouldn't just be better
+R3 argues that while there is some discussion of the distinction between rational choice and social identity processes, there is no analysis shedding light on this distinction. I do not agree with this assessment. Section 5.3 of the manuscript, testing the role of political moderators, has the purpose of exploring this distinction. As I argue, the fact that the bias is diminshed when looking only within the chairman's own bloc is suggestive of a rational mechanism, though the test is not conclusive. I appreciate the comment, and I have rewritten section 5.3 to make the purpose of the section clearer.
 
-discuss this some more, hard relative to other tests, partisanship is not the same as in the US
+### 3.2: Partisanship as a 'soft' test
 
-in the realm of partisan identities, this test is relatively hard
+R3 notes that relative to a minimal group experiment, demonstrating an effect of partisanship is a relatively 'soft' test of social identity. As R3 writes, "parties for MPs are not minimal groups".
 
-### 3.2: Pattern of queues of brief remarks
+This point is well taken, and the test here is indeed softer than the test in Tajfel et al.'s original minimal group experiments. However, the contribution of this study is to test for intergroup bias in an ecologically valid setting. In contrast to experimentally assigned minimal groups, this study shows discrimination in naturally occurring groups. It is in the context of naturally occurring groups that I argue the setting constitutes a 'hard' test, insofar as it is characterized by transparency, limited political polarization and low levels of corruption. Hence, the study should be seen as a complement to minimal group experiments.
 
-look into this, not sure what he mechanism
+### 3.3: Pattern of queues of brief remarks
 
-### 3.3: Cancelling out of co-partisanship effect in the aggregate
+R3 argues that "the fact that certain talks - most probably on not bi-partisan but polarizing issues - leads to a queue of brief remarks point to another impact not accounted for". I am unsure of which aspect of the debates R3 refers to here, but on the question of chairman self-selection into issues, see the discussion in section 2.1 above.
 
-argue softly against this
+### 3.4: Cancelling out of co-partisanship effect in the aggregate
 
-### 3.4: Generalizability
+R3 notes that the (small) impact of copartisanship cancels out in the aggregate because the chairmanship role rotates between parties. I thank R3 for highlighting this point, and I have added a mention of this to section 5.2 of the manuscript. I also revisit this issue in the conclusion, cf. section 1.2 above.
+
+### 3.5: Generalizability
+
+R3 takes issue with the claim of generalizability of the result. I appreciate this point, and I fully agree that the result is not generalizable in the sense of representing in any way a random sample of theoretically relevant settings. Instead, the result allows for 'least likely' case inference because intergroup bias is *ex ante* relatively unlikely in the setting studied here. I have rewritten the conclusion to make it clearer that I refer to the latter sense and not the former. Specifically, the revised version of the conclusion does not use the word 'generalizability'. I thank R3 for pointing out this potential confusion.
 
 discuss theory-based vs sampling-based generalizability
 
-### 3.5: Requirements of Social Identity Theory
+### 3.6: Intentionality of social identity theory
 
-don't know where he gets this stuff
+R3 notes that social identity theory does not require an "honest" wish to behave in line with rules, which my discussion on p. 4 indicates. I thank R3 for pointing this out. The purpose of the sentence in question was to highlight that social identity theory predicts intergroup bias even if *chairmen* may have an honest wish to treat speakers neutrally. It was not meant to imply that this is a specific theoretical requirement of social identity theory. I have rewritten the sentence in question to make this distinction clearer.
 
-### 3.6: Part 5 vs. Social Identity Theory
+### 3.7: Part 5 vs. Social Identity Theory
 
-uhm, yeah, and that's what I'm saying
+R3 argues that part 5 of the manuscript is not compatible with the social identity perspective. Part 5 of the manuscript is the entire results section, and it is unclear to which part R3 is specifically referring. However, section 5.3 in the manuscript does explore the distinction between rational choice and social identity processes (see also section 3.1 in this note). Though the test is not conclusive, it is indeed the case that the evidence is somewhat suggestive of a rational (as opposed to a social identity) mechanism. I would argue that the manuscript as it is is reasonably clear on this point.
 
-### 3.7: Intergroup bias vs. bias
+### 3.8: Intergroup bias vs. bias
 
-what does that even mean
+R3 argues that though the manuscript claims to show intergroup bias, "it doesn't, it shows only bias". I am unsure of precisely the distinction referred to here, but I read this comment as interpreting "intergroup bias" to refer specifically to a social identity process. That is not the intended meaning. "Intergroup bias" does not specifically imply a social identity process, but is perfectly compatible with a rational process. In other words, a chairman who fully rationally discriminates against non-copartisan speakers (say, with the purpose of political gain) can also be said to show intergroup bias. It is my understanding that this represents a conventional use of the term "intergroup bias". 
 
-### 3.8: Reporting model significance
+### 3.9: Reporting model significance
 
 you got it dude
 
-### 3.9: Significance of 'prime minister' variable
+### 3.10: Significance of 'prime minister' variable
 
 explain it here
 
