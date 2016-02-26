@@ -22,30 +22,13 @@ ft<-subset(ftall,secs<150 & secs>10 & year(starttime)>2000)
 ft<-arrange(ft,starttime)
 
 
-#check sample of data
-sample_n(ft,30)
-ggplot(subset(ft,chair==0),aes(x=secs)) + geom_density()
-ggplot(ft,aes(x=timeofday,y=secs)) + geom_point() + facet_grid(debate~.)
+# #check sample of data
+# sample_n(ft,30)
+# ggplot(subset(ft,chair==0),aes(x=secs)) + geom_density()
+# ggplot(ft,aes(x=timeofday,y=secs)) + geom_point() + facet_grid(debate~.)
 
 
-#get list of chairmen by debate
-allchairmen<-ftall %>%
-  filter(chair==1) %>%
-  group_by(chairname,debate) %>%
-  summarise(remarks=length(chairname))
 
-seatvec<-c(16,rep(22,2),rep(47,7),rep(8,3),rep(18,2),47,23,16,23,16,9,47,44,34,17,17,13,45,rep(47,3),45,rep(47,4),rep(22,4),37,25,22,25,22,16,14,rep(46,2)) #careful! here I manually type in the seats for each chairman's party by debate
-allchairmen$seats<-seatvec
-
-allchairmen<-allchairmen %>%
-  group_by(chairname) %>%
-  summarise(remarks=sum(remarks),debates=length(debate),avgseats=mean(seats)) %>%
-  mutate(president=ifelse(chairname %in% c("Thor Pedersen","Mogens Lykketoft","Pia Kjaersgaard"),1,0))
-
-#can we predict chairman activity?
-summary(remarksm1<-lm(remarks~president+debates,data=allchairmen))
-summary(remarksm2<-lm(remarks~president+debates+avgseats,data=allchairmen))
-summary(remarksm3<-lm(remarks~president+avgseats,data=allchairmen))
 
 ### REGRESSION MODELS
 
@@ -61,6 +44,27 @@ stargazer(m1,m2,m3,m4,m5,type="text",omit=c("debate"),omit.stat=c("f","ser"))
 
 summary(mx<-lm(secs~copartisan+timeofday+female+factor(coarseparty)+factor(chairparty)+debate,data=ft))
 
+summary(lm(m5f,data=ft))
+summary(lm(m5f,data=sample_frac(ft,.5,replace=F)))
+summary(lm(m5f,data=subset(ft,timeofday>11)))
+
+#quickly, try to eliminate followups
+ft$followup<-0
+for (i in 3:nrow(ft)){
+  if (ft$chair[i]==0 & ft$fullname[i]==ft$fullname[i-2] & !(ft$fullname[i]==ft$fullname[i-4])){
+    ft$followup[i]<-1
+  }
+}
+
+table(ft$followup)
+
+ggplot(ft,aes(x=secs)) +
+  geom_density() +
+  facet_grid(copartisan~followup)
+
+summary(lm(m5f,data=subset(ft,followup==0)))
+
+?sample
 
 summary(m5intposdifltmedian<-lm(m5f,data=subset(ft,intposdif<=2.34)))
 summary(m5ordposdifltmedian<-lm(m5f,data=subset(ft,ordposdif<=2)))
@@ -163,6 +167,24 @@ m3robdfe<-robcov(ols(m3fdfe,data=ft,x=T,y=T),cluster=ft$chairname)
 m4robdfe<-robcov(ols(m4fdfe,data=ft,x=T,y=T),cluster=ft$chairname)
 m5robdfe<-robcov(ols(m5fdfe,data=ft,x=T,y=T),cluster=ft$chairname)
 
+#get list of chairmen by debate
+allchairmen<-ftall %>%
+  filter(chair==1) %>%
+  group_by(chairname,debate) %>%
+  summarise(remarks=length(chairname))
+
+seatvec<-c(16,rep(22,2),rep(47,7),rep(8,3),rep(18,2),47,23,16,23,16,9,47,44,34,17,17,13,45,rep(47,3),45,rep(47,4),rep(22,4),37,25,22,25,22,16,14,rep(46,2)) #careful! here I manually type in the seats for each chairman's party by debate
+allchairmen$seats<-seatvec
+
+allchairmen<-allchairmen %>%
+  group_by(chairname) %>%
+  summarise(remarks=sum(remarks),debates=length(debate),avgseats=mean(seats)) %>%
+  mutate(president=ifelse(chairname %in% c("Thor Pedersen","Mogens Lykketoft","Pia Kjaersgaard"),1,0))
+
+#can we predict chairman activity?
+summary(remarksm1<-lm(remarks~president+debates,data=allchairmen))
+summary(remarksm2<-lm(remarks~president+debates+avgseats,data=allchairmen))
+summary(remarksm3<-lm(remarks~president+avgseats,data=allchairmen))
 
 ### TABLES
 
