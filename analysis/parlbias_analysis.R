@@ -48,9 +48,9 @@ summary(lm(m5f,data=ft))
 summary(lm(m5f,data=sample_frac(ft,.5,replace=F)))
 summary(lm(m5f,data=subset(ft,timeofday>11)))
 
-#quickly, try to eliminate followups
+# identify followups
 ft$followup<-0
-for (i in 3:nrow(ft)){
+for (i in 5:nrow(ft)){
   if (ft$chair[i]==0 & ft$fullname[i]==ft$fullname[i-2] & !(ft$fullname[i]==ft$fullname[i-4])){
     ft$followup[i]<-1
   }
@@ -58,11 +58,13 @@ for (i in 3:nrow(ft)){
 
 table(ft$followup)
 
-ggplot(ft,aes(x=secs)) +
+ggplot(subset(ft,copartisan<2),aes(x=secs)) +
   geom_density() +
-  facet_grid(copartisan~followup)
+  facet_grid(copartisan~followup) +
+  theme_bw()
 
 summary(lm(m5f,data=subset(ft,followup==0)))
+#conclusion: data is robust to the exclusion of followups, but they do not (solely) explain the bimodal distribution
 
 ?sample
 
