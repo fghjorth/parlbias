@@ -66,14 +66,8 @@ ggplot(subset(ft,copartisan<2),aes(x=secs)) +
 summary(lm(m5f,data=subset(ft,followup==0)))
 #conclusion: data is robust to the exclusion of followups, but they do not (solely) explain the bimodal distribution
 
-?sample
 
-summary(m5intposdifltmedian<-lm(m5f,data=subset(ft,intposdif<=2.34)))
-summary(m5ordposdifltmedian<-lm(m5f,data=subset(ft,ordposdif<=2)))
-summary(m5cobloc<-lm(m5f,data=subset(ft,cobloc==1)))
-
-tidy(m1)
-
+#collect effect estimates in data frame
 effectests<-data.frame(est=rep(NA,10),se=rep(NA,10),method=c(rep("OLS",5),rep("Logit",5)),model=rep(1:5,2))
 effectests[1,1:2]<-tidy(m1)[2,2:3]
 effectests[2,1:2]<-tidy(m2)[2,2:3]
@@ -117,6 +111,10 @@ m2rob<-robcov(ols(m2f,data=ft,x=T,y=T),cluster=ft$chairname)
 m3rob<-robcov(ols(m3f,data=ft,x=T,y=T),cluster=ft$chairname)
 m4rob<-robcov(ols(m4f,data=ft,x=T,y=T),cluster=ft$chairname)
 m5rob<-robcov(ols(m5f,data=ft,x=T,y=T),cluster=ft$chairname)
+
+m5intposdifltmedian<-robcov(ols(m5f,data=subset(ft,intposdif<=2.34),x=T,y=T),cluster=subset(ft,intposdif<=2.34)$chairname)
+m5ordposdifltmedian<-robcov(ols(m5f,data=subset(ft,ordposdif<=2),x=T,y=T),cluster=subset(ft,ordposdif<=2)$chairname)
+m5cobloc<-ols(m5f,data=subset(ft,cobloc==1),x=T,y=T)
 
 #setup up varying slopes model to test how the bias varies by 
 mlm3<-lmer(secs~copartisan+timeofday+female+(1|coarseparty)+(1+copartisan|chairparty),data=ft)
@@ -190,11 +188,11 @@ summary(remarksm3<-lm(remarks~president+avgseats,data=allchairmen))
 
 ### TABLES
 
-checkmarks<-c("Speaker party FE & & & $\\checkmark$ & & $\\checkmark$ \\\\", "Chair party FE & & & & & $\\checkmark$ \\\\")
+checkmarks<-c("Speaker party FE & & & & $\\checkmark$ & $\\checkmark$ \\\\", "Chair party FE & & & & & $\\checkmark$ \\\\")
 #, "Debate FE & & & & $\\checkmark$ & $\\checkmark$ \\\\")
 covarlabs<-c("Copartisan","Time of day","Gender (female)","Debate type (Opening)","Intercept")
  
-regtab1<-stargazer(m1rob,m2rob,m3rob,m4rob,m5rob,style="apsr",omit=c("coarse","chair"),omit.stat=c("aic"),
+regtab1<-stargazer(m1rob,m2rob,m3rob,m4rob,m5rob,style="apsr",omit=c("coarse","chair"),
                    dep.var.labels="Speaking time (seconds)",dep.var.labels.include=T,font.size="footnotesize",
                    label="parlbias_regtab1",column.sep.width="-5pt",star.cutoffs=c(.1,.05,.01),align=T,title="OLS models of speaking time",digits=2,
                    covariate.labels=covarlabs)
@@ -203,7 +201,7 @@ regtab1<-c(regtab1[1:24],checkmarks,regtab1[25:length(regtab1)])
 regtab1
 writeLines(regtab1,con="../tables/parlbias_regtab1.txt")
 
-regtab1logit<-stargazer(m1.logit,m2.logit,m3.logit,m4.logit,m5.logit,style="apsr",omit=c("coarse","chair","debate"),omit.stat=c("wald"),
+regtab1logit<-stargazer(m1.logit,m2.logit,m3.logit,m4.logit,m5.logit,style="apsr",omit=c("coarse","chair","debate"),
                         dep.var.labels="Dummy: speaking time exceeds 60 seconds",dep.var.labels.include=T,font.size="footnotesize",
                         label="parlbias_regtab1logit",column.sep.width="-5pt",covariate.labels=covarlabs,star.cutoffs=c(.1,.05,.01),
                         align=T,title="Logit models of exceeding standard speaking time",digits=2)
@@ -216,16 +214,14 @@ modscolumnlabels<-c("Full","Distance$\\leq$median (int.)","Distance$\\leq$median
 modscheckmarks<-c("Speaker party FE & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ \\\\", "Chair party FE & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ \\\\")
 #, "Debate FE & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ \\\\")
 
-regtabmods<-stargazer(m5,m5intposdifltmedian,m5ordposdifltmedian,m5cobloc,style="apsr",omit=c("coarse","chair","debate"),omit.stat=c("wald"),
+regtabmods<-stargazer(m5rob,m5intposdifltmedian,m5ordposdifltmedian,m5cobloc,style="apsr",omit=c("coarse","chair","debate"),
                       dep.var.labels="Speaking time (seconds)",dep.var.labels.include=T,font.size="footnotesize",
                       label="parlbias_regtabmods",column.sep.width="-5pt",covariate.labels=covarlabs,star.cutoffs=c(.1,.05,.01),
                       align=T,title="Tests of political moderators",digits=2,column.labels=modscolumnlabels)
 
 regtabmods
-
 regtabmods<-c(regtabmods[1:23],modscheckmarks,regtabmods[24:length(regtabmods)])
-
-regtabmods[11]<-"\\\\[-1.8ex] & \\multicolumn{4}{c}{Speaking time (seconds)} \\\\ " #fix strange dep var labeling error
+regtabmods
 
 writeLines(regtabmods,con="../tables/parlbias_regtabmods.txt")
 
@@ -241,7 +237,7 @@ modeffectests$model<-modeffectests$model %>%
   gsub("\\$\\\\leq\\$","<=",.)
 
 #robustness check 1: restricted sample
-regtabrs<-stargazer(m1robrs,m2robrs,m3robrs,m4robrs,m5robrs,style="apsr",omit=c("coarse","chair"),omit.stat=c("wald"),
+regtabrs<-stargazer(m1robrs,m2robrs,m3robrs,m4robrs,m5robrs,style="apsr",omit=c("coarse","chair"),
                    dep.var.labels="Speaking time (seconds)",dep.var.labels.include=T,font.size="footnotesize",
                    label="parlbias_regtabrs",column.sep.width="-5pt",star.cutoffs=c(.1,.05,.01),align=T,title="Results for only members of leadership parties",digits=2,
                    covariate.labels=covarlabs)
@@ -255,7 +251,7 @@ dfecheckmarks<-c("Speaker party FE & & & $\\checkmark$ & & $\\checkmark$ \\\\", 
                  "Debate FE & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ \\\\")
 dfecovarlabs<-c("Copartisan","Time of day","Gender (female)","Intercept")
 
-regtabdfe<-stargazer(m1robdfe,m2robdfe,m3robdfe,m4robdfe,m5robdfe,style="apsr",omit=c("coarse","chair","debate"),omit.stat=c("wald"),
+regtabdfe<-stargazer(m1robdfe,m2robdfe,m3robdfe,m4robdfe,m5robdfe,style="apsr",omit=c("coarse","chair","debate"),
                    dep.var.labels="Speaking time (seconds)",dep.var.labels.include=T,font.size="footnotesize",
                    label="parlbias_regtabdfe",column.sep.width="-5pt",star.cutoffs=c(.1,.05,.01),align=T,title="Results with debate-specific fixed effects",digits=2,
                    covariate.labels=dfecovarlabs)
@@ -267,7 +263,7 @@ writeLines(regtabdfe,con="../tables/parlbias_regtabdfe.txt")
 
 
 #table for reg predicting remarks presided over
-remarksregtab<-stargazer(remarksm1,remarksm2,remarksm3,style="apsr",omit.stat=c("wald"),
+remarksregtab<-stargazer(remarksm1,remarksm2,remarksm3,style="apsr",
                       dep.var.labels="Number of remarks enforced",dep.var.labels.include=T,font.size="footnotesize",
                       label="parlbias_remarksregtab",column.sep.width="-5pt",star.cutoffs=c(.1,.05,.01),
                       align=T,title="Model predicting number of remarks enforced by chairmen",digits=2,

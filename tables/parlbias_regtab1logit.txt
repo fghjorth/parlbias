@@ -1,6 +1,6 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: fr, feb 12, 2016 - 15:23:05
+% Date and time: ma, feb 29, 2016 - 13:52:24
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{Logit models of exceeding standard speaking time} 
@@ -20,7 +20,7 @@
   Debate type (Opening) & -0.60^{***} & -0.65^{***} & -0.69^{***} & -3.17^{***} & -2.89^{***} \\ 
   & (0.03) & (0.12) & (0.13) & (0.74) & (0.74) \\ 
  N & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} \\ 
-Speaker party FE & & & $\checkmark$ & & $\checkmark$ \\
+Speaker party FE & & & & $\checkmark$ & $\checkmark$ \\
 Chair party FE & & & & & $\checkmark$ \\
 Log Likelihood & \multicolumn{1}{c}{-3,767.39} & \multicolumn{1}{c}{-3,767.33} & \multicolumn{1}{c}{-3,761.94} & \multicolumn{1}{c}{-3,679.05} & \multicolumn{1}{c}{-3,647.81} \\ 
 AIC & \multicolumn{1}{c}{7,538.78} & \multicolumn{1}{c}{7,540.66} & \multicolumn{1}{c}{7,533.87} & \multicolumn{1}{c}{7,386.10} & \multicolumn{1}{c}{7,337.63} \\ 

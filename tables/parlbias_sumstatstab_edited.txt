@@ -11,9 +11,9 @@
 \hline \\[-1.8ex]
 \multicolumn{1}{l}{Type} & \multicolumn{1}{r}{Number} & \multicolumn{1}{r}{Share (numeric)} & \multicolumn{1}{r}{Share (time-weighted)} \\
 \hline \\[-1.8ex]
-\multicolumn{1}{l}{Brief remark} & \multicolumn{1}{l}{5854} & \multicolumn{1}{l}{97.37} & \multicolumn{1}{l}{82.63} \\
-\multicolumn{1}{l}{PM speech} & \multicolumn{1}{l}{11} & \multicolumn{1}{l}{0.18} & \multicolumn{1}{l}{0.86} \\
-\multicolumn{1}{l}{Spokesperson speech} & \multicolumn{1}{l}{147} & \multicolumn{1}{l}{2.45} & \multicolumn{1}{l}{16.5} \\ 
+\multicolumn{1}{l}{Brief remark} & \multicolumn{1}{r}{5854} & \multicolumn{1}{r}{97.37} & \multicolumn{1}{r}{82.63} \\
+\multicolumn{1}{l}{PM speech} & \multicolumn{1}{r}{11} & \multicolumn{1}{r}{0.18} & \multicolumn{1}{r}{0.86} \\
+\multicolumn{1}{l}{Spokesperson speech} & \multicolumn{1}{r}{147} & \multicolumn{1}{r}{2.45} & \multicolumn{1}{r}{16.5} \\ 
 \hline \\[-1.8ex]
 \end{tabular}
 \end{table}

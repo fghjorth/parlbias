@@ -1,6 +1,6 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: fr, feb 12, 2016 - 15:23:06
+% Date and time: ma, feb 29, 2016 - 11:36:18
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{Results with debate-specific fixed effects} 

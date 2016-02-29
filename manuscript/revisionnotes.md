@@ -1,4 +1,10 @@
 ---  
+header-includes:
+  - \usepackage{graphicx}
+  - \usepackage{dcolumn}
+  - \usepackage{booktabs}
+  - \usepackage{tgtermes}
+  - \usepackage[margin=1.2in]{geometry}
 title: Revision notes for "Intergroup Bias in Parliamentary Rule Enforcement"
 author: Frederik Hjorth  
 date: February 5, 2016
@@ -76,7 +82,7 @@ Lastly, R2 points to the somewhat puzzling bimodal shape of the distribution of 
 
 To explore this issue further, I have changed the figure to present the distribution for non-copartisans separately for members of the chairman's own parliamentary bloc and for members of the other bloc. The revised figure is shown below.
 
-\includegraphics{../figures/parlbias_dens.pdf}
+\includegraphics[scale=.7]{../figures/parlbias_dens.pdf}
 
 The pattern suggests some of the difference reflects self-censorship.
 
@@ -104,8 +110,6 @@ R3 notes that the (small) impact of copartisanship cancels out in the aggregate 
 
 R3 takes issue with the claim of generalizability of the result. I appreciate this point, and I fully agree that the result is not generalizable in the sense of representing in any way a random sample of theoretically relevant settings. Instead, the result allows for 'least likely' case inference because intergroup bias is *ex ante* relatively unlikely in the setting studied here. I have rewritten the conclusion to make it clearer that I refer to the latter sense and not the former. Specifically, the revised version of the conclusion does not use the word 'generalizability'. I thank R3 for pointing out this potential confusion.
 
-discuss theory-based vs sampling-based generalizability
-
 ### 3.6: Intentionality of social identity theory
 
 R3 notes that social identity theory does not require an "honest" wish to behave in line with rules, which my discussion on p. 4 indicates. I thank R3 for pointing this out. The purpose of the sentence in question was to highlight that social identity theory predicts intergroup bias even if *chairmen* may have an honest wish to treat speakers neutrally. It was not meant to imply that this is a specific theoretical requirement of social identity theory. I have rewritten the sentence in question to make this distinction clearer.
@@ -116,15 +120,15 @@ R3 argues that part 5 of the manuscript is not compatible with the social identi
 
 ### 3.8: Intergroup bias vs. bias
 
-R3 argues that though the manuscript claims to show intergroup bias, "it doesn't, it shows only bias". I am unsure of precisely the distinction referred to here, but I read this comment as interpreting "intergroup bias" to refer specifically to a social identity process. That is not the intended meaning. "Intergroup bias" does not specifically imply a social identity process, but is perfectly compatible with a rational process. In other words, a chairman who fully rationally discriminates against non-copartisan speakers (say, with the purpose of political gain) can also be said to show intergroup bias. It is my understanding that this represents a conventional use of the term "intergroup bias". 
+R3 argues that though the manuscript claims to show intergroup bias, "it doesn't, it shows only bias". I am unsure of precisely the distinction referred to here, but I read this comment as interpreting "intergroup bias" to refer specifically to a social identity process. That is not the intended meaning. "Intergroup bias" does not specifically imply a social identity process, but is perfectly compatible with a rational process. In other words, a chairman who fully rationally discriminates against non-copartisan speakers (say, with the purpose of political gain) can also be said to show intergroup bias. It is my understanding that this represents a conventional use of the phrase "intergroup bias".
 
 ### 3.9: Reporting model significance
 
-you got it dude
+R3 requests that Table 2 and others report model significance. I omitted model significance statistics in the original version only for presentational reasons, since including them made the results tables too wide to fit on the page. In the revised version, I have now squeezed the tables together a bit, and all the regression tables now report model significance (a $\chi^2$ statistic). As shown, all model significance tests reject the null of no improvement in fit compared to an intercept-only model.
 
 ### 3.10: Significance of 'prime minister' variable
 
-explain it here
+R3 asks about the meaning of the significance of the "Prime Minister" variable. The question is very reasonable, and I should have elaborated on the variable in the original version of the manuscript. In short, the "Prime Minister" captures
 
 ## Reviewer 4
 

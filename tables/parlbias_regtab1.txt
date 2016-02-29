@@ -1,6 +1,6 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: fr, feb 12, 2016 - 15:23:05
+% Date and time: ma, feb 29, 2016 - 13:52:23
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{OLS models of speaking time} 
@@ -22,7 +22,7 @@
   Intercept & 51.81^{***} & 52.28^{***} & 52.20^{***} & 32.63^{***} & 35.93^{***} \\ 
   & (0.92) & (2.96) & (3.14) & (3.06) & (4.91) \\ 
  N & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} & \multicolumn{1}{c}{5,756} \\ 
-Speaker party FE & & & $\checkmark$ & & $\checkmark$ \\
+Speaker party FE & & & & $\checkmark$ & $\checkmark$ \\
 Chair party FE & & & & & $\checkmark$ \\
 R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.04} & \multicolumn{1}{c}{0.05} \\ 
 Adjusted R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.04} & \multicolumn{1}{c}{0.05} \\ 
