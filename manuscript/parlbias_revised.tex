@@ -54,7 +54,7 @@
 \doublespacing
 
 \begin{abstract}
-\noindent Political actors are often required them to enforce rules without giving in-groups special treatment. But are such institutional roles likely to be successful? Here, we exploit a special case of exogenously assigned intergroup relations: debates in the Danish parliament, in which parliament chairmen drawn from parliamentary parties enforce speaking time. Analyzing 5,338 speeches scraped from online transcripts, we provide evidence that speech lengths are biased in favor of the presiding chairman's party. On average, speakers of the same party as the presiding chairman give 5 percent longer speeches and are 5 percent more likely to exceed the speaking time limit. The paper contributes to the extant literature by demonstrating political intergroup bias in a natural setting, suggesting that group loyalties can supersede institutional obligations even in a `least likely' context of clear rules, complete observability, and a tradition of parliamentary cooperation.
+\noindent Political actors are often required them to enforce rules without giving in-groups special treatment. But are such institutional roles likely to be successful? Here, we exploit a special case of exogenously assigned intergroup relations: debates in the Danish parliament, in which parliament chairmen drawn from parliamentary parties enforce speaking time. Analyzing 5,756 speeches scraped from online transcripts, we provide evidence that speech lengths are biased in favor of the presiding chairman's party. On average, speakers of the same party as the presiding chairman give 5 percent longer speeches and are 5 percent more likely to exceed the speaking time limit. The paper contributes to the extant literature by demonstrating political intergroup bias in a natural setting, suggesting that group loyalties can supersede institutional obligations even in a `least likely' context of clear rules, complete observability, and a tradition of parliamentary cooperation.
 \end{abstract}
 
 %\begin{keyword}
@@ -231,9 +231,11 @@ Empirically speaking, the conclusion from these moderation tests is reasonably c
 
 However, this empirical result is not necessarily highly informative of the merits of the competing theoretical perspectives. The fact that chairmen are sensitive to the political distance and bloc affiliation of the speaker would seem to speak in favor of the partisan governance perspective, since making this distinction furthers a broader political agenda. On the other hand, a social identity perspective might argue that, in parliamentary politics in multiparty systems, political blocs and groups of ideologically similar parties are themselves meaningful social identities. Thus, though the results do lend some support to the partisan governance account, it seems safest to conclude that the tests cannot fully adjudicate between the two theorized mechanisms.
 
-\subsection{Effect heterogeneity across chairmen}
+\subsection{Additional tests}
 
-Figure \ref{parlbias_chairranfefs} shows effects estimated separately for each chairman in the data.
+robustness checks
+
+Figure \ref{parlbias_chairranfefs} in the appendix shows effects estimated separately for each chairman in the data.
 
 
 \section{Conclusion}\label{conc}
@@ -284,12 +286,20 @@ To be sure, the distinction between these two mechanisms is not necessarily a pe
 
 \input{../tables/parlbias_regtabdfe.txt}
 
-\clearpage
-\subsection{Effect heterogeneity across chairmen}\label{appchairranef}
+\input{../tables/parlbias_regtabexpm.txt}
 
-\begin{figure}[!htbp]
+\clearpage
+\subsection{Effect heterogeneity across parties and chairmen}\label{appchairranef}
+
+\begin{figure}[ht]
 \centering
-\includegraphics[scale=.55]{../figures/parlbias_chairranefs}
+\includegraphics[scale=.50]{../figures/parlbias_partyranefs.pdf}
+\caption{Effects of copartisanship estimated separately for each chairman's party. Estimates are drawn from a random effects model corresponding to model 3 in Table 2 with varying slopes for chairman party. The grey dashed vertical line shows the average copartisanship effect (i.e., the fixed effect). Parties are ordered top to bottom according to party ordinal left/right ranking. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}\label{partyranefs}
+\end{figure}
+
+\begin{figure}[hb]
+\centering
+\includegraphics[scale=.50]{../figures/parlbias_chairranefs}
   \caption{Effects of copartisanship estimated separately for each chairman in the data. Estimates are drawn from a random effects model corresponding to model 3 in Table 2 with varying slopes for individual chairmen. The grey dashed vertical line shows the average copartisanship effect (i.e., the fixed effect). Chairmen are ordered top to bottom according to party ordinal left/right ranking and within parties according to estimated effect. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}\label{parlbias_chairranfefs}
 \end{figure}
 

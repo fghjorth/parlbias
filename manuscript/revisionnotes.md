@@ -129,13 +129,17 @@ R3 argues that though the manuscript claims to show intergroup bias, "it doesn't
 
 ### 3.9: Reporting model significance
 
-R3 requests that Table 2 and others report model significance. I omitted model significance statistics in the original version only for presentational reasons, since including them made the results tables too wide to fit on the page. In the revised version, I have now squeezed the tables together a bit, and all the regression tables now report model significance (a $\chi^2$ statistic). As shown, all model significance tests reject the null of no improvement in fit compared to an intercept-only model.
+R3 requests that Table 2 and others report model significance. I omitted model significance statistics in the original version only for presentational reasons, since including them made the results tables too wide to fit on the page. In the revised version, I have now squeezed the tables together a bit, and all the regression tables now report model significance (a $\chi^2$ statistic). As shown, all model significance tests are strongly significant, i.e. the null of no improvement in fit compared to an intercept-only model can be rejected.
 
 ### 3.10: Significance of 'prime minister' variable
 
 R3 asks about the meaning of the significance of the "Prime Minister" (PM) variable. The question is very reasonable, and I should have elaborated on the variable in the original version of the manuscript. In short, the PM variable captures remarks given by the sitting PM. The variable was included in the original manuscript in order to show that the effect was not driven by PMs, who may by virtue of their office be able to self-select into speaking slots (as opposed to other MP's, cf. section 2.3 in this note). As is clear from the original results, the PM variable is not a plausible confounder, as the copartisan variable remains significant throughout, and the PM variable is itself not consistently significant.
 
-In the revised version of the manuscript, I have chosen not to include the PM variable. I have done so because upon further consideration I believe it is not theoretically relevant to distinguish between PM's and MP's in the context of this study: outside of their formal PM speeches (which are already excluded from the data), PM's have no special role or privileges in debates, and so they partake in debates only in their capacity of MP. For this reason, I have decided not to distinguish between PM's and other MP's. Regardless of the status of MP's, they do not drive the results of the paper. In order to show this, Table XXX.YYY of the appendix presents the results when PM remarks are excluded. As shown, the results are substantively unchanged. I thank R3 for directing my attention to this variable, which was insufficiently explained in the original version of the manuscript.
+In the revised version of the manuscript, I have chosen not to include the PM variable. I have done so because upon further consideration I believe it is not theoretically relevant to distinguish between PM's and MP's in the context of this study: outside of their formal PM speeches (which are already excluded from the data), PM's have no special role or privileges in debates, and so they partake in debates only in their capacity of MP. For this reason, I have decided not to distinguish between PM's and other MP's. Regardless of the status of MP's, they do not drive the results of the paper. In order to show this, Table 8 of the appendix presents the results when PM remarks are excluded. As shown, the results are substantively unchanged. The table is also shown below.
+
+\input{../tables/parlbias_regtabexpm.txt}
+
+I thank R3 for directing my attention to this variable, which was insufficiently explained in the original version of the manuscript.
 
 ## Reviewer 4
 
@@ -160,7 +164,7 @@ I want to stress that I found R4's discussion of this illuminating, and in the r
 
 R4 notes that there is unexploited information about effect heterogeneity across chairmen and parties in the data.
 
-I thank R4 for this suggestion, which I had not originally thought of. To test for effect heterogeneity, I have estimated random effects models with the same specification as model 5 in the main results, but allowing for the coefficient on the copartisan variable to vary by either chairman party or individual chairmen. The results are summarized in Figure \ref{partyranefs} and Figure \ref{chairranefs}.
+I thank R4 for this suggestion, which I had not originally thought of. To test for effect heterogeneity, I have estimated random effects models with the same specification as model 5 in the main results, but allowing for the coefficient on the copartisan variable to vary by either chairman party or individual chairmen. The results are summarized in Figure \ref{partyranefs} and Figure \ref{chairranefs}. In both figures, the parties are ordered from left (top) to right (bottom) based on voters' estimates of party positions.
 
 \begin{figure}[H]
 \centering
@@ -174,4 +178,8 @@ I thank R4 for this suggestion, which I had not originally thought of. To test f
 \caption{Estimates from a random effects model with varying slopes by chairman. Effects are ordered by party position from left (top) to right (bottom) and by descending coefficient value within parties.}\label{chairranefs}
 \end{figure}
 
-Two lessons stand out in Figure \ref{partyranefs} and Figure \ref{chairranefs}. First of all, there appears to be no clear pattern with respect to effect heterogeneity across parties. 
+Two lessons stand out in Figure \ref{partyranefs} and Figure \ref{chairranefs}. First of all, looking at Figure \ref{partyranefs}, there appears to be no clear pattern with respect to effect heterogeneity across parties. If anything there may be a slight trend towards higher coefficients for more leftist parties, but the variance of the estimates is too high to conclude that with any certainty.
+
+Second of all, though this trend is  largely corroborated by Figure \ref{chairranefs}, there is one important exception: one chairman, Mogens Lykketoft of the Social Democratic party (sixth from the top) is estimated to be significantly more biased in favor of copartisans than the average amount. This is significant because this study was originally inspired by allegations made by opposition parties in the summer of 2013 that the presiding head chairman was biased against the opposition (e.g., [this article (in Danish)](http://www.politiko.dk/nyheder/borgerlige-partier-i-voldsomt-angreb-paa-lykketoft)). The presiding head chairman was precisely Mogens Lykketoft. This theoretically important point is in my view the average bias, not the personal angle, but the particularly large estimate for Lykketoft lends some additional face validity to the results.
+
+I have included Figure \ref{partyranefs} and Figure \ref{chairranefs} in the paper's appendix, and I describe the figures in the new section "Additional tests".

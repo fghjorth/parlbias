@@ -125,11 +125,12 @@ fixef(mlm3)
 partyranefs<-data.frame(party=rownames(ranef(mlm3)$chairparty),coef=fixef(mlm3)[2]+ranef(mlm3)$chairparty[,2],se=se.ranef(mlm3)$chairparty[,2])
 partyranefs
 
-partyranefs<-ft %>%
-  group_by(coarseparty) %>%
-  summarise(ordpos=mean(chairordpos)) %>%
-  rename(party=coarseparty) %>%
+partyranefs<- ft %>%
+  group_by(chairparty) %>%
+  summarise(ordpos=mean(chairordpos,na.rm=T)) %>%
+  rename(party=chairparty) %>%
   left_join(partyranefs,.,by="party")
+partyranefs
 
 #varying slopes by chairman name
 mlm3_chairs<-lmer(secs~copartisan+timeofday+female+(1|coarseparty)+(1+copartisan|chairname),data=ft)
@@ -148,7 +149,7 @@ chairranefs<-ft %>%
 
 
 
-#robustness check 1
+#robustness check 1: only leadership parties
 require(rms)
 m1robrs<-robcov(ols(m1f,data=subset(ft,leadshipparty==1),x=T,y=T),cluster=subset(ft,leadshipparty==1)$chairname)
 m2robrs<-robcov(ols(m2f,data=subset(ft,leadshipparty==1),x=T,y=T),cluster=subset(ft,leadshipparty==1)$chairname)
@@ -156,7 +157,7 @@ m3robrs<-robcov(ols(m3f,data=subset(ft,leadshipparty==1),x=T,y=T),cluster=subset
 m4robrs<-robcov(ols(m4f,data=subset(ft,leadshipparty==1),x=T,y=T),cluster=subset(ft,leadshipparty==1)$chairname)
 m5robrs<-robcov(ols(m5f,data=subset(ft,leadshipparty==1),x=T,y=T),cluster=subset(ft,leadshipparty==1)$chairname)
 
-#robustness check 2
+#robustness check 2: debate fixed effects
 m1fdfe<-as.formula(secs~copartisan+debate)
 m2fdfe<-as.formula(secs~copartisan+timeofday+debate)
 m3fdfe<-as.formula(secs~copartisan+timeofday+female+debate)
@@ -168,6 +169,13 @@ m2robdfe<-robcov(ols(m2fdfe,data=ft,x=T,y=T),cluster=ft$chairname)
 m3robdfe<-robcov(ols(m3fdfe,data=ft,x=T,y=T),cluster=ft$chairname)
 m4robdfe<-robcov(ols(m4fdfe,data=ft,x=T,y=T),cluster=ft$chairname)
 m5robdfe<-robcov(ols(m5fdfe,data=ft,x=T,y=T),cluster=ft$chairname)
+
+#robustness check 3: exclude prime ministers
+m1robexpm<-robcov(ols(m1f,data=subset(ft,pm==0),x=T,y=T),cluster=subset(ft,pm==0)$chairname)
+m2robexpm<-robcov(ols(m2f,data=subset(ft,pm==0),x=T,y=T),cluster=subset(ft,pm==0)$chairname)
+m3robexpm<-robcov(ols(m3f,data=subset(ft,pm==0),x=T,y=T),cluster=subset(ft,pm==0)$chairname)
+m4robexpm<-robcov(ols(m4f,data=subset(ft,pm==0),x=T,y=T),cluster=subset(ft,pm==0)$chairname)
+m5robexpm<-robcov(ols(m5f,data=subset(ft,pm==0),x=T,y=T),cluster=subset(ft,pm==0)$chairname)
 
 #get list of chairmen by debate
 allchairmen<-ftall %>%
@@ -262,6 +270,16 @@ regtabdfe<-c(regtabdfe[1:22],dfecheckmarks,regtabdfe[23:length(regtabdfe)])
 regtabdfe
 writeLines(regtabdfe,con="../tables/parlbias_regtabdfe.txt")
 
+
+#robustness check 3: excluding pm's
+regtabexpm<-stargazer(m1robexpm,m2robexpm,m3robexpm,m4robexpm,m5robexpm,style="apsr",omit=c("coarse","chair"),
+                    dep.var.labels="Speaking time (seconds)",dep.var.labels.include=T,font.size="footnotesize",
+                    label="parlbias_regtabexpm",column.sep.width="-5pt",star.cutoffs=c(.1,.05,.01),align=T,title="Results excluding prime ministers",digits=2,
+                    covariate.labels=covarlabs)
+
+regtabexpm<-c(regtabexpm[1:24],checkmarks,regtabexpm[25:length(regtabexpm)])
+regtabexpm
+writeLines(regtabexpm,con="../tables/parlbias_regtabexpm.txt")
 
 
 #table for reg predicting remarks presided over

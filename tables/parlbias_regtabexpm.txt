@@ -1,0 +1,33 @@
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Mar 01, 2016 - 21:14:00
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{Results excluding prime ministers} 
+  \label{parlbias_regtabexpm} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{-5pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} } 
+\\[-1.8ex]\hline \\[-1.8ex] 
+\\[-1.8ex] & \multicolumn{5}{c}{Speaking time (seconds)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)}\\ 
+\hline \\[-1.8ex] 
+ Copartisan & 3.42^{***} & 3.14^{***} & 3.13^{***} & 2.11^{**} & 2.67^{***} \\ 
+  & (1.00) & (1.16) & (1.12) & (1.00) & (0.72) \\ 
+  Time of day &  & -0.14 & -0.12 & -0.09 & -0.06 \\ 
+  &  & (0.14) & (0.15) & (0.14) & (0.14) \\ 
+  Gender (female) &  &  & 1.39^{**} & 0.66 & 0.72 \\ 
+  &  &  & (0.58) & (0.61) & (0.60) \\ 
+  Debate type (Opening) &  &  & -0.72 & -0.38 & 0.34 \\ 
+  &  &  & (1.08) & (0.93) & (0.92) \\ 
+  Intercept & 51.45^{***} & 53.74^{***} & 53.21^{***} & 34.28^{***} & 36.66^{***} \\ 
+  & (0.93) & (2.70) & (2.83) & (2.37) & (4.11) \\ 
+ N & \multicolumn{1}{c}{5,379} & \multicolumn{1}{c}{5,379} & \multicolumn{1}{c}{5,379} & \multicolumn{1}{c}{5,379} & \multicolumn{1}{c}{5,379} \\ 
+Speaker party FE & & & & $\checkmark$ & $\checkmark$ \\
+Chair party FE & & & & & $\checkmark$ \\
+R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.005} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.04} & \multicolumn{1}{c}{0.06} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.005} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.04} & \multicolumn{1}{c}{0.05} \\ 
+chi$^{2}$ & \multicolumn{1}{c}{22.50$^{***}$ (df = 1)} & \multicolumn{1}{c}{26.62$^{***}$ (df = 2)} & \multicolumn{1}{c}{35.22$^{***}$ (df = 4)} & \multicolumn{1}{c}{222.21$^{***}$ (df = 13)} & \multicolumn{1}{c}{308.80$^{***}$ (df = 20)} \\ 
+\hline \\[-1.8ex] 
+\multicolumn{6}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
+\end{tabular} 
+\end{table} 
