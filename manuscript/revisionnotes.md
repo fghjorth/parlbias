@@ -1,6 +1,7 @@
 ---  
 header-includes:
   - \usepackage{graphicx}
+  - \usepackage{float}
   - \usepackage{dcolumn}
   - \usepackage{booktabs}
   - \usepackage{tgtermes}
@@ -80,9 +81,13 @@ do chairmen call on more people from his/her own party? add discussion about thi
 
 Lastly, R2 points to the somewhat puzzling bimodal shape of the distribution of non-copartisan response times shown in Figure 2. The shape already receives some discussion in the text, but as R2 rightly points out, it is not quite the shape one would expect given just some average bias by chairmen.
 
-To explore this issue further, I have changed the figure to present the distribution for non-copartisans separately for members of the chairman's own parliamentary bloc and for members of the other bloc. The revised figure is shown below.
+To explore this issue further, I have changed the figure to present the distribution for non-copartisans separately for members of the chairman's own parliamentary bloc and for members of the other bloc. Figure \ref{dens} shows the revised figure.
 
-\includegraphics[scale=.7]{../figures/parlbias_dens.pdf}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.55]{../figures/parlbias_dens.pdf}
+\caption{Distribution of speaking times for non-copartisans outside of the chairman's political bloc (left panel), non-copartisans from the chairman's own political bloc (middle panel) and copartisans (right panel).}\label{dens}
+\end{figure}
 
 The pattern suggests some of the difference reflects self-censorship.
 
@@ -143,17 +148,30 @@ R4 discusses my interpretation of the observed effect, noting (entirely correctl
 
 R4 argues that the second interpretation "is [not] equivalent to debates being enforced unequally -- the authors' interpretation".
 
-I thank R4 for these considerations, though I do disagree with them in a few specific respects. First of all, while it is true that
+I thank R4 for these considerations. However, I disagree with R4's argument in a few specific respects. First of all, while it is correct that I do not provide direct evidence of differential formal enforcement by chairmen, I do not believe this is sufficient grounds for concluding that it does not take place. Though chairmens' gaveling is not recorded in the transcripts, it does take place, and so should be considered a possible mechanism by which the observed bias in favor of copartisans arises.
 
-R4 says (2) does not imply unequal enforcement. discuss.
+Of the other two mechanisms proposed by R4, the first is that MP's XXXXX
+
+The other mechanism proposed by R4 is that subtle signals from the chairman such as body language, unconsciously perceived by the speaker, give rise to the observed difference. I agree entirely with R4 that this is a plausible mechanism. I only disagree with R4 in R4's assessment that this does not amount to unequal enforcement of the rules. Though qualitatively different from consciously biased enforcement (i.e., the first mechanism discussed by R4), it still at the end of the day amounts to unequal enforcement insofar as it affects speakers differently based on their copartisanship with the chairman. In other words, "unequal enforcement" (or "bias") is a behavioral characterization, not a motivational one, and as such can still meaningfully be said to exist even if not necessarily consciously perceived by either chairman or speaker.
+
+I want to stress that I found R4's discussion of this illuminating, and in the revised version of the manuscript I have extended the discussion of how the finding should be interpreted. Specifically, the rewritten conclusion includes a discussion of the interpretation of the effect with a particular focus on the distinction between consciously vs. unconsciously unequal enforcement suggested by R4.
 
 ### 4.2: Unexploited information about effect heterogeneity
 
-is bias consistent across parties? coefficient masks a lot of heterogeneity
+R4 notes that there is unexploited information about effect heterogeneity across chairmen and parties in the data.
 
-this is cool, I should just do this
+I thank R4 for this suggestion, which I had not originally thought of. To test for effect heterogeneity, I have estimated random effects models with the same specification as model 5 in the main results, but allowing for the coefficient on the copartisan variable to vary by either chairman party or individual chairmen. The results are summarized in Figure \ref{partyranefs} and Figure \ref{chairranefs}.
 
-\begin{figure}
-\includegraphics[scale=.55]{../figures/parlbias_chairranefs.pdf}
-\caption{Estimates from a random effects model with varying slopes by chairman. Effects are ordered by party position from left (top) to right (bottom) and by descending coefficient value within parties.}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.55]{../figures/parlbias_partyranefs.pdf}
+\caption{Estimates from a random effects model with varying slopes by chairman party. Effects are ordered by party position from left (top) to right (bottom).}\label{partyranefs}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.55]{../figures/parlbias_chairranefs.pdf}
+\caption{Estimates from a random effects model with varying slopes by chairman. Effects are ordered by party position from left (top) to right (bottom) and by descending coefficient value within parties.}\label{chairranefs}
+\end{figure}
+
+Two lessons stand out in Figure \ref{partyranefs} and Figure \ref{chairranefs}. First of all, there appears to be no clear pattern with respect to effect heterogeneity across parties. 
