@@ -60,7 +60,7 @@ This is indeed a relevant concern, and I thank R2 for pointing it out. [HVORFOR 
 
 However, two aspects of how debates are organized indicate that issue-based self-selection is not likely. First of all, opening or closing debates are not about any one issue, but cover a multitude of issues, mostly based on issue disagreements between parties. MP's may debate one issue for a few remarks, and then shift to another issue. Second of all, the schedule of which chairmen oversee the debate is set in advance of the debate. Hence, chairmen are not able to opt in to the role when a particular issue comes up in the debate. The combination of these two aspects suggests self-selection based on issues is unlikely. I have added a paragraph in section 3.1 of the manuscript making this point explicitly.
 
-For additional evidence in favor of the "as if" randomness assumption, see section 1.1 above.
+For additional evidence in favor of the "as if" randomness assumption, see section 1.1 in this note.
 
 ### 2.2: Debate-specific fixed effects
 
@@ -128,16 +128,22 @@ R3 requests that Table 2 and others report model significance. I omitted model s
 
 ### 3.10: Significance of 'prime minister' variable
 
-R3 asks about the meaning of the significance of the "Prime Minister" variable. The question is very reasonable, and I should have elaborated on the variable in the original version of the manuscript. In short, the "Prime Minister" captures
+R3 asks about the meaning of the significance of the "Prime Minister" (PM) variable. The question is very reasonable, and I should have elaborated on the variable in the original version of the manuscript. In short, the PM variable captures remarks given by the sitting PM. The variable was included in the original manuscript in order to show that the effect was not driven by PMs, who may by virtue of their office be able to self-select into speaking slots (as opposed to other MP's, cf. section 2.3 in this note). As is clear from the original results, the PM variable is not a plausible confounder, as the copartisan variable remains significant throughout, and the PM variable is itself not consistently significant.
+
+In the revised version of the manuscript, I have chosen not to include the PM variable. I have done so because upon further consideration I believe it is not theoretically relevant to distinguish between PM's and MP's in the context of this study: outside of their formal PM speeches (which are already excluded from the data), PM's have no special role or privileges in debates, and so they partake in debates only in their capacity of MP. For this reason, I have decided not to distinguish between PM's and other MP's. Regardless of the status of MP's, they do not drive the results of the paper. In order to show this, Table XXX.YYY of the appendix presents the results when PM remarks are excluded. As shown, the results are substantively unchanged. I thank R3 for directing my attention to this variable, which was insufficiently explained in the original version of the manuscript.
 
 ## Reviewer 4
 
 ### 4.1: Interpretation
 
-two possibilities:
+R4 discusses my interpretation of the observed effect, noting (entirely correctly) that I do not provide direct evidence that chairmen gavel non-copartisans faster than co-partisans. As R4 notes, excluding this possibility leaves two possible mechanisms:
 
-1. MP's self-select into the debate schedule
-2. MP's self-select into longer speaking times
+1. MP's self-select strategically into the debate schedule
+2. Copartisan chairmen induce an unconscious bias on part of the speaker by means of subtle signals such as body language
+
+R4 argues that the second interpretation "is [not] equivalent to debates being enforced unequally -- the authors' interpretation".
+
+I thank R4 for these considerations, though I do disagree with them in a few specific respects. First of all, while it is true that
 
 R4 says (2) does not imply unequal enforcement. discuss.
 
@@ -146,3 +152,8 @@ R4 says (2) does not imply unequal enforcement. discuss.
 is bias consistent across parties? coefficient masks a lot of heterogeneity
 
 this is cool, I should just do this
+
+\begin{figure}
+\includegraphics[scale=.55]{../figures/parlbias_chairranefs.pdf}
+\caption{Estimates from a random effects model with varying slopes by chairman. Effects are ordered by party position from left (top) to right (bottom) and by descending coefficient value within parties.}
+\end{figure}

@@ -73,18 +73,19 @@ table(ft$party[ft$leadshipparty==1])
 #create simpler party variable
 ft$coarseparty<-ifelse(ft$party %in% c("IA","JF","SIU","SP","T","TF","KD","UFG"),"Other",ft$party)
 
-#is the pm speaking?
-subset(ft,substr(ft$fullname,1,nchar("Statsministeren"))=="Statsministeren")
-ft$pm<-ifelse(substr(ft$fullname,1,nchar("Statsministeren"))=="Statsministeren",1,0)
-
 #fix prime minister names
 pmfullnames<-as.character(names(table(droplevels(ft$fullname[ft$pm==1]))))
 ft$fullname[ft$fullname==pmfullnames[1]]<-"Helle Thorning-Schmidt"
 ft$fullname[ft$fullname==pmfullnames[2]]<-"Lars Loekke Rasmussen"
 ft$fullname[ft$fullname==pmfullnames[3]]<-"Helle Thorning-Schmidt"
 
+#is the pm speaking?
+subset(ft,substr(ft$fullname,1,nchar("Statsministeren"))=="Statsministeren")
+ft$pm<-ifelse(substr(ft$fullname,1,nchar("Statsministeren"))=="Statsministeren",1,0)
 
-
+#fix pm assignments after 2014
+ft$pm[ft$fullname=="Helle Thorning-Schmidt" & ymd(substr(ft$starttime,1,10)) %in% seq(ymd("2011-09-15"),ymd("2015-06-18"),by="days")]<-1
+ft$pm[ft$fullname=="Lars Loekke Rasmussen" & ymd(substr(ft$starttime,1,10)) > ymd("2015-06-18")]<-1
 
 #get parties placements from voter estimates in most recent election survey
 FV11<-read.csv("../rawdata/ElectionStudy-2011_F1.csv",sep=",",dec=".")

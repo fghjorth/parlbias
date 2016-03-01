@@ -44,9 +44,11 @@ stargazer(m1,m2,m3,m4,m5,type="text",omit=c("debate"),omit.stat=c("f","ser"))
 
 summary(mx<-lm(secs~copartisan+timeofday+female+factor(coarseparty)+factor(chairparty)+debate,data=ft))
 
+#quick robustness checks
 summary(lm(m5f,data=ft))
 summary(lm(m5f,data=sample_frac(ft,.5,replace=F)))
 summary(lm(m5f,data=subset(ft,timeofday>11)))
+summary(lm(m5f,data=subset(ft,pm==0)))
 
 # identify followups
 ft$followup<-0
