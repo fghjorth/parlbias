@@ -57,7 +57,7 @@ Lastly, R1 mentions some minor points. I have fixed the word in footnote 1 to 'm
 
 R2 also suggests additional evidence justifying the assumption of "as if" randomness. Specifically, R2 expresses concern that chairmen might self-select into particular issues of high importance to the party. If party members also take more time discussing these issues, this self-selection would produce a spurious finding of own-group bias. As a way of countering this concern, R2 suggests showing that the issues debated are similar in copartisan and non-copartisan matches.
 
-This is indeed a relevant concern, and I thank R2 for pointing it out. [HVORFOR MAN IKKE KAN MÅLE INDHOLD]
+This is indeed a relevant concern, and I thank R2 for pointing it out. Because of the structure of the data,
 
 However, two aspects of how debates are organized indicate that issue-based self-selection is not likely. First of all, opening or closing debates are not about any one issue, but cover a multitude of issues, mostly based on issue disagreements between parties. MP's may debate one issue for a few remarks, and then shift to another issue. Second of all, the schedule of which chairmen oversee the debate is set in advance of the debate. Hence, chairmen are not able to opt in to the role when a particular issue comes up in the debate. The combination of these two aspects suggests self-selection based on issues is unlikely. I have added a paragraph in section 3.1 of the manuscript making this point explicitly.
 
