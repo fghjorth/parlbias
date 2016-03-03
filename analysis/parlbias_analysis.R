@@ -9,6 +9,8 @@ require(tidyr)
 require(broom)
 require(lme4)
 require(arm)
+require(rms)
+require(mfx)
 
 #win
 #setwd("C:/Users/fh/Documents/GitHub/parlbias/data")
@@ -99,7 +101,6 @@ summary(m3.logit<-glm(secsgt60~copartisan+timeofday+female+debatetype,data=ft,fa
 summary(m4.logit<-glm(secsgt60~copartisan+timeofday+female+debatetype+factor(coarseparty),data=ft,family=binomial()))
 summary(m5.logit<-glm(secsgt60~copartisan+timeofday+female+debatetype+factor(coarseparty)+factor(chairparty),data=ft,family=binomial()))
 
-require(mfx)
 effectests[6,1:2]<-logitmfx(m1.logit$formula,data=ft)$mfxest[1,1:2]*100
 effectests[7,1:2]<-logitmfx(m2.logit$formula,data=ft)$mfxest[1,1:2]*100
 effectests[8,1:2]<-logitmfx(m3.logit$formula,data=ft)$mfxest[1,1:2]*100
@@ -107,7 +108,6 @@ effectests[9,1:2]<-logitmfx(m4.logit$formula,data=ft)$mfxest[1,1:2]*100
 effectests[10,1:2]<-logitmfx(m5.logit$formula,data=ft)$mfxest[1,1:2]*100
 
 #for the main models, cluster observations by presiding chair
-require(rms)
 m1rob<-robcov(ols(m1f,data=ft,x=T,y=T),cluster=ft$chairname)
 m2rob<-robcov(ols(m2f,data=ft,x=T,y=T),cluster=ft$chairname)
 m3rob<-robcov(ols(m3f,data=ft,x=T,y=T),cluster=ft$chairname)
@@ -147,10 +147,7 @@ chairranefs<-ft %>%
   arrange(.,ordpos,-coef) %>%
   mutate(chairorder=1:20,chairparty=paste(chair," ","(",party,")",sep=""))
 
-
-
 #robustness check 1: only leadership parties
-require(rms)
 m1robrs<-robcov(ols(m1f,data=subset(ft,leadshipparty==1),x=T,y=T),cluster=subset(ft,leadshipparty==1)$chairname)
 m2robrs<-robcov(ols(m2f,data=subset(ft,leadshipparty==1),x=T,y=T),cluster=subset(ft,leadshipparty==1)$chairname)
 m3robrs<-robcov(ols(m3f,data=subset(ft,leadshipparty==1),x=T,y=T),cluster=subset(ft,leadshipparty==1)$chairname)
@@ -177,6 +174,7 @@ m3robexpm<-robcov(ols(m3f,data=subset(ft,pm==0),x=T,y=T),cluster=subset(ft,pm==0
 m4robexpm<-robcov(ols(m4f,data=subset(ft,pm==0),x=T,y=T),cluster=subset(ft,pm==0)$chairname)
 m5robexpm<-robcov(ols(m5f,data=subset(ft,pm==0),x=T,y=T),cluster=subset(ft,pm==0)$chairname)
 
+
 #get list of chairmen by debate
 allchairmen<-ftall %>%
   filter(chair==1) %>%
@@ -195,6 +193,17 @@ allchairmen<-allchairmen %>%
 summary(remarksm1<-lm(remarks~president+debates,data=allchairmen))
 summary(remarksm2<-lm(remarks~president+debates+avgseats,data=allchairmen))
 summary(remarksm3<-lm(remarks~president+avgseats,data=allchairmen))
+
+allchairmen$exest<-NA
+allchairmen$exse<-NA
+for (i in 1:nrow(allchairmen)){
+  exm<-robcov(ols(m5f,data=subset(ft,chairname!=allchairmen$chairname[i]),x=T,y=T),cluster=subset(ft,chairname!=allchairmen$chairname[i])$chairname)
+  allchairmen[i,6:7]<-c(exm$coefficients[2],sqrt(diag(exm$var))[2])
+}
+
+
+
+
 
 ### TABLES
 
@@ -419,6 +428,24 @@ ggplot(chairranefs,aes(x=coef,y=reorder(chairparty,-chairorder))) +
 
 ggsave(file="../figures/parlbias_chairranefs.pdf",height=6,width=9)
 
+
+# estimate coefficient excluding each chairman
+ggplot(allchairmen,aes(x=exest,y=chairname)) +
+  geom_point(size=2.5) +
+  geom_errorbarh(aes(xmin=exest-1.96*exse,xmax=exest+1.96*exse),height=0,size=.5) +
+  geom_errorbarh(aes(xmin=exest-1.65*exse,xmax=exest+1.65*exse),height=0,size=1.2) +
+  expand_limits(x=0) +
+  geom_vline(xintercept=0,linetype="dashed") +
+  geom_vline(xintercept=m5rob$coefficients[2],linetype="dashed",color="grey40") +
+  xlab("Estimate excluding chairman (seconds)") +
+  ylab("Chairman") +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_blank(),
+        panel.border = element_rect(colour = "black"))
+
+ggsave(file="../figures/parlbias_exchairests.pdf",height=6,width=9)
 
 ## plot predicted remarks presided over
 seatsprdf1<-data.frame(expand.grid(debates=1:9,president=0:1,avgseats=21)) %>%
