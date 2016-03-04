@@ -8,7 +8,8 @@ header-includes:
   - \usepackage[margin=1.2in]{geometry}
 title: Revision notes for "Intergroup Bias in Parliamentary Rule Enforcement"
 author: Frederik Hjorth  
-date: February 5, 2016
+date: March XXX, 2016
+fontsize: 12pt
 ---  
 
 # Revision memo
@@ -57,9 +58,7 @@ Lastly, R1 mentions some minor points. I have fixed the word in footnote 1 to 'm
 
 R2 also suggests additional evidence justifying the assumption of "as if" randomness. Specifically, R2 expresses concern that chairmen might self-select into particular issues of high importance to the party. If party members also take more time discussing these issues, this self-selection would produce a spurious finding of own-group bias. As a way of countering this concern, R2 suggests showing that the issues debated are similar in copartisan and non-copartisan matches.
 
-This is indeed a relevant concern, and I thank R2 for pointing it out. [HVORFOR MAN IKKE KAN MÅLE INDHOLD]
-
-However, two aspects of how debates are organized indicate that issue-based self-selection is not likely. First of all, opening or closing debates are not about any one issue, but cover a multitude of issues, mostly based on issue disagreements between parties. MP's may debate one issue for a few remarks, and then shift to another issue. Second of all, the schedule of which chairmen oversee the debate is set in advance of the debate. Hence, chairmen are not able to opt in to the role when a particular issue comes up in the debate. The combination of these two aspects suggests self-selection based on issues is unlikely. I have added a paragraph in section 3.1 of the manuscript making this point explicitly.
+This is indeed a relevant concern, and I thank R2 for pointing it out. Because of the structure of the data, which only contains information about the duration of each remark and not its content, I cannot compare the issues covered by different speakers. However, two aspects of how debates are organized indicate that issue-based self-selection is not likely. First of all, opening or closing debates are not about any one issue, but cover a multitude of issues, mostly based on issue disagreements between parties. MP's may debate one issue for a few remarks, and then shift to another issue. Second of all, the schedule of which chairmen oversee the debate is set in advance of the debate. Hence, chairmen are not able to opt in to the role when a particular issue comes up in the debate. The combination of these two aspects suggests self-selection based on issues is unlikely. I have added a paragraph in section 3.1 of the manuscript making this point explicitly.
 
 For additional evidence in favor of the "as if" randomness assumption, see section 1.1 in this note.
 
@@ -71,11 +70,9 @@ As additional evidence in favor of the "as if" randomness assumption, R2 suggest
 
 ### 2.3: More information about speaking assignment rules
 
-TJEK OM DEBATSYSTEMET ER ELEKTRONISK
+R2 asks for more information about the rules about how the chairman decides who gets to speak in what order. As R2 notes, chairman may be able to allocate more time to his/her own party by just calling on more copartisans to speak, and the original version of the manuscript does not discuss this possibility.
 
-add in some stuff from forretningsordenen
-
-do chairmen call on more people from his/her own party? add discussion about this
+I have added a discussion of this issue, which can be found on p. XXX of the manuscript. In short, chairmens are able to call on copartisans more than non-copartisans, but to a limited extent, since MP's sign up to speak using an electronic queue system. Chairmen can change the order of the queue, but do so only to a limited extent, and only (formally) with the purpose of giving party spokespersons preference. It is important to note that even if chairmen do give copartisans preference, this would not confound my estimate, since I estimate bias in speaking time *conditional* on speaking. I thank R2 for raising this issue, which I had not originally thought of.
 
 ### 2.4: Discuss the odd shape of Figure 2
 
@@ -152,9 +149,9 @@ R4 discusses my interpretation of the observed effect, noting (entirely correctl
 
 R4 argues that the second interpretation "is [not] equivalent to debates being enforced unequally -- the authors' interpretation".
 
-I thank R4 for these considerations. However, I disagree with R4's argument in a few specific respects. First of all, while it is correct that I do not provide direct evidence of differential formal enforcement by chairmen, I do not believe this is sufficient grounds for concluding that it does not take place. Though chairmens' gaveling is not recorded in the transcripts, it does take place, and so should be considered a possible mechanism by which the observed bias in favor of copartisans arises.
+I thank R4 for these considerations. However, I disagree with R4's argument in a few specific respects. First of all, while it is correct that I do not provide direct evidence of differential formal enforcement by chairmen, I do not believe this is sufficient grounds for concluding that it does not take place. Though chairmens' gaveling is not recorded in the transcripts, it does happen (as can be witnessed in video recordings of debates), and so should be considered an at least possible mechanism by which the observed bias in favor of copartisans arises.
 
-Of the other two mechanisms proposed by R4, the first is that MP's XXXXX
+Of the two alternative mechanisms proposed by R4, the first is that MP's self-select into speaking based on the partisanship of the presiding chairman. This is indeed an important concern, and the possibility of self-selection cannot be dismissed out of hand. In the original manuscript, the issue is partly covered by the concluding discussion of whether MP's anticipate biased rule enforcement. In the revised manuscript, I have expanded this discussion to explicitly mention the possibility of selection bias.
 
 The other mechanism proposed by R4 is that subtle signals from the chairman such as body language, unconsciously perceived by the speaker, give rise to the observed difference. I agree entirely with R4 that this is a plausible mechanism. I only disagree with R4 in R4's assessment that this does not amount to unequal enforcement of the rules. Though qualitatively different from consciously biased enforcement (i.e., the first mechanism discussed by R4), it still at the end of the day amounts to unequal enforcement insofar as it affects speakers differently based on their copartisanship with the chairman. In other words, "unequal enforcement" (or "bias") is a behavioral characterization, not a motivational one, and as such can still meaningfully be said to exist even if not necessarily consciously perceived by either chairman or speaker.
 
@@ -180,6 +177,16 @@ I thank R4 for this suggestion, which I had not originally thought of. To test f
 
 Two lessons stand out in Figure \ref{partyranefs} and Figure \ref{chairranefs}. First of all, looking at Figure \ref{partyranefs}, there appears to be no clear pattern with respect to effect heterogeneity across parties. If anything there may be a slight trend towards higher coefficients for more leftist parties, but the variance of the estimates is too high to conclude that with any certainty.
 
-Second of all, though this trend is  largely corroborated by Figure \ref{chairranefs}, there is one important exception: one chairman, Mogens Lykketoft of the Social Democratic party (sixth from the top) is estimated to be significantly more biased in favor of copartisans than the average amount. This is significant because this study was originally inspired by allegations made by opposition parties in the summer of 2013 that the presiding head chairman was biased against the opposition (e.g., [this article (in Danish)](http://www.politiko.dk/nyheder/borgerlige-partier-i-voldsomt-angreb-paa-lykketoft)). The presiding head chairman was precisely Mogens Lykketoft. This theoretically important point is in my view the average bias, not the personal angle, but the particularly large estimate for Lykketoft lends some additional face validity to the results.
+Second of all, though this trend is  largely corroborated by Figure \ref{chairranefs}, there is one important exception: one chairman, Mogens Lykketoft of the Social Democratic party (sixth from the top) is estimated to be significantly more biased in favor of copartisans than the average amount. This is significant because this study was originally inspired by allegations made by opposition parties in the summer of 2013 that the presiding head chairman was biased against the opposition (e.g., [this article (in Danish)](http://www.politiko.dk/nyheder/borgerlige-partier-i-voldsomt-angreb-paa-lykketoft)). The presiding head chairman was precisely Mogens Lykketoft. The theoretically important point of the paper is in my view the average bias, not the personal angle, but the particularly large estimate for Lykketoft lends some additional face validity to the results.
+
+For good measure, I have also tried to estimate model 5 in the main results on separate subsets of the data excluding each individual chairmen, to see if the results are driven by any single chairman. The estimates are shown in Figure \ref{exchairests}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.55]{../figures/parlbias_exchairests.pdf}
+\caption{Estimates from model 5 in the main results on separate subsets of the data excluding each individual chairman. Effects are ordered by party position from left (top) to right (bottom) and by descending coefficient value within parties.}\label{exchairests}
+\end{figure}
+
+As shown in Figure \ref{exchairests}, the results are robust to excluding each chairmen, demonstrating that the finding is not merely attributable to any single individual. The estimate for Mogens Lykketoft is less precise than the others because he alone accounts for nearly half of the observations, but the point estimate is in line with the others.
 
 I have included Figure \ref{partyranefs} and Figure \ref{chairranefs} in the paper's appendix, and I describe the figures in the new section "Additional tests".
