@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/frederikhjorth/GitHub/parlbias/manuscript/.texpadtmp/parlbias_revised.aux
 The style file: ../../../thesis/bibliography/model2-names.bst
-Illegal, another \bibstyle command---line 78 of file /Users/frederikhjorth/GitHub/parlbias/manuscript/.texpadtmp/parlbias_revised.aux
+Illegal, another \bibstyle command---line 122 of file /Users/frederikhjorth/GitHub/parlbias/manuscript/.texpadtmp/parlbias_revised.aux
  : \bibstyle
  :          {chicago}
 I'm skipping whatever remains of this command
@@ -11,16 +11,16 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty booktitle in Tajfel1986
 You've used 29 entries,
             2984 wiz_defined-function locations,
-            1001 strings with 13931 characters,
-and the built_in function-call counts, 17218 in all, are:
-= -- 1399
+            1000 strings with 13696 characters,
+and the built_in function-call counts, 17203 in all, are:
+= -- 1396
 > -- 505
 < -- 25
 + -- 196
 - -- 167
-* -- 1792
-:= -- 2534
-add.period$ -- 86
+* -- 1789
+:= -- 2532
+add.period$ -- 85
 call.type$ -- 29
 change.case$ -- 199
 chr.to.int$ -- 29
@@ -28,20 +28,20 @@ cite$ -- 30
 duplicate$ -- 1295
 empty$ -- 1334
 format.name$ -- 261
-if$ -- 3238
+if$ -- 3235
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 254
-newline$ -- 159
+newline$ -- 158
 num.names$ -- 118
-pop$ -- 410
+pop$ -- 412
 preamble$ -- 1
 purify$ -- 171
 quote$ -- 0
-skip$ -- 413
+skip$ -- 412
 stack$ -- 0
 substring$ -- 854
-swap$ -- 916
+swap$ -- 915
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
@@ -49,5 +49,5 @@ type$ -- 249
 warning$ -- 1
 while$ -- 132
 width$ -- 0
-write$ -- 417
+write$ -- 415
 (There was 1 error message)
