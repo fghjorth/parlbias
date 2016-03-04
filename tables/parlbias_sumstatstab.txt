@@ -1,6 +1,6 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: to, feb 11, 2016 - 10:19:18
+% Date and time: fr, mar 04, 2016 - 13:48:28
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{Types of speeches in opening and closing debates in the Folketing} 
@@ -11,9 +11,10 @@
 \hline \\[-1.8ex] 
 \multicolumn{1}{l}{Type} & \multicolumn{1}{r}{Number} & \multicolumn{1}{r}{Share (numeric)} & \multicolumn{1}{r}{Share (time-weighted)} \\ 
 \hline \\[-1.8ex] 
-\multicolumn{1}{l}{Brief remark} & \multicolumn{1}{l}{5854} & \multicolumn{1}{l}{97.3719228210246} & \multicolumn{1}{l}{82.6341319524106} \\ 
-\multicolumn{1}{l}{PM speech} & \multicolumn{1}{l}{11} & \multicolumn{1}{l}{0.182967398536261} & \multicolumn{1}{l}{0.861437951339954} \\ 
-\multicolumn{1}{l}{Spokesperson speech} & \multicolumn{1}{l}{147} & \multicolumn{1}{l}{2.44510978043912} & \multicolumn{1}{l}{16.5044300962494} \\ 
+\multicolumn{1}{l}{Brief remark} & \multicolumn{1}{l}{5756} & \multicolumn{1}{l}{ 95.74} & \multicolumn{1}{l}{ 82.4} \\ 
+\multicolumn{1}{l}{PM speech} & \multicolumn{1}{l}{14} & \multicolumn{1}{l}{  0.23} & \multicolumn{1}{l}{  2.3} \\ 
+\multicolumn{1}{l}{Spokesperson speech} & \multicolumn{1}{l}{144} & \multicolumn{1}{l}{  2.40} & \multicolumn{1}{l}{ 15.0} \\ 
+\multicolumn{1}{l}{Total} & \multicolumn{1}{l}{6012} & \multicolumn{1}{l}{100.00} & \multicolumn{1}{l}{100.0} \\ 
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 

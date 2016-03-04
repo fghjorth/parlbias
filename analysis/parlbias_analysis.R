@@ -302,7 +302,7 @@ writeLines(remarksregtab,con="../tables/parlbias_remarksregtab.txt")
 
 ### SUMMARY STATS TABLES
 ftall$type<-NA
-ftall$type[ftall$secs<150]<-"Brief remark"
+ftall$type[ftall$secs<150 & ftall$secs>10 & !is.na(ftall$copartisan)]<-"Brief remark"
 ftall$type[ftall$secs>=150]<-"Spokesperson speech"
 ftall$type[ftall$secs>=150 & ftall$pm==1]<-"PM speech"
 
@@ -316,6 +316,14 @@ sumstatstab<- subset(ftall,chair==0 & year(starttime)>2000) %>%
   group_by(type) %>%
   summarise(count=n(),nshare=100*(count/totaln),secshare=100*sum(secs)/totalsecs)
 
+#add total line at bottom
+sumstatstab[4,]<-c("Total",colSums(sumstatstab[,2:4]))
+class(sumstatstab$nshare)<-"numeric"
+class(sumstatstab$secshare)<-"numeric"
+sumstatstab$nshare<-as.character(format(sumstatstab$nshare,digits=2))
+sumstatstab$secshare<-as.character(format(sumstatstab$secshare,digits=2))
+
+str(sumstatstab)
 
 sumstatstabtex<-stargazer(sumstatstab,summary=F,digits=2,title="Types of speeches in opening and closing debates in the Folketing",label="parlbias_sumstatstab",font.size="footnotesize",align=T,colnames=T,rownames=F)
 
