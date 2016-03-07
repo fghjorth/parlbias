@@ -182,7 +182,7 @@ Where $SpeechLength_i$ is an either continuous or dichotomous measure of the len
 
 As seen in Figure \ref{parlbias_dens}, the frequency of non-copartisan speeches drops markedly as speech lengths approach the 60-second limit. By contrast, copartisan speeches are almost perfectly symmetrically distributed around the limit. The figure lends \textit{prima facie} support to the notion that speech lengths depend on the partisan relation between chair and speaker.
 
-A noticeable detail in Figure \ref{parlbias_dens} is that for non-copartisans not in the chairman's political bloc (i.e., left panel), the distribution of speaking times is slightly bimodal. The reason for this slight bimodality is not clear. 
+A noticeable detail in Figure \ref{parlbias_dens} is that for non-copartisans not in the chairman's political bloc (i.e., left panel), the distribution of speaking times is slightly bimodal. The reason for this slight bimodality is not clear. It is indicative of some heterogeneity in the observed effect, such that the remarks of some non-copartisans are censored to well below the cutoff, whereas others are unaffected. We do not delve further into what underpins this heterogeneity in this paper.
 
 Table \ref{parlbias_regtab1} presents estimations of various specifications of equation \ref{model}. Model 1 presents a bivariate regression of speech length on copartisanship; models 2-5 add various controls. Across all model specifications, the estimated effect of copartisanship is robustly significant and in the predicted direction. 
 
@@ -206,7 +206,7 @@ As the table shows, the results using the dichotomized dependent variable are su
 %Since the reported coefficients are logit coefficients they are not readily interpretable. 
 
 \subsection{Making sense of the magnitude of bias}
-As a way of providing more intuitive quantities of interest, figure \ref{parlbias_effectplot} plots average marginal effects for all the copartisanship estimates in tables \ref{parlbias_regtab1} and \ref{parlbias_regtab1logit}. As shown in the logit model estimates in the left hand panel, a speaker of the same party as the chairman has an on average five percent higher chance of exceeding the speaking time limit, an estimate that is very stable across specification. In the linear model estimates in the right hand panel, the effect estimates converge at around 2.8 \todo{revise} seconds longer speaking time for copartisans.
+As a way of providing more intuitive quantities of interest, figure \ref{parlbias_effectplot} plots average marginal effects for all the copartisanship estimates in tables \ref{parlbias_regtab1} and \ref{parlbias_regtab1logit}. As shown in the logit model estimates in the left hand panel, a speaker of the same party as the chairman has an on average five percent higher chance of exceeding the speaking time limit, an estimate that is fairly stable across specification. In the linear model estimates in the right hand panel, the median effect estimate reflects an around 3 seconds longer speaking time for copartisans.
 
 \begin{figure}[!htbp]
 \centering
@@ -214,13 +214,13 @@ As a way of providing more intuitive quantities of interest, figure \ref{parlbia
   \caption{Estimated effect of copartisanship on speaking time (left panel) and probability of exceeding 60 seconds (right panel) for each of the five models estimated. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals. Logit model estimates represent marginal effects expressed in percentage points.}\label{parlbias_effectplot}
 \end{figure}
 
-There are several ways to make sense of the magnitude of this effect. One is in terms of standardized measures of effect size such as Cohen's $d$, which assesses effects relative to the standard deviation of the dependent variable. Since the standard deviation of speaking time is 28.6, Cohen's $d$ for the estimated effect is around 0.1, typically classified as a `small' effect \citep{Cohen1992}. This corresponds well to the intuitive sense that 2.8 seconds out of a speech of around 60 seconds is indeed a relatively small fraction. At the same time, this characterization somewhat understates the magnitude of the effect, since it ignores the repeated nature of the speeches. Given that each chairman oversees 128 speeches per debate on average, the cumulative speaking time bias per chairman per debate comes to around six minutes. In other words, though the speaking time bias is small at the level of the individual speech, it adds up when viewed from the perspective of each chairman. At the same time, the continual rotation of chairmen means that in the aggregate, the these biases are likely to roughly cancel out. Overall, the magnitude of bias would seem to be best characterized as small, but non-negligible.
+There are several ways to make sense of the magnitude of this effect. One is in terms of standardized measures of effect size such as Cohen's $d$, which assesses effects relative to the standard deviation of the dependent variable. Since the standard deviation of speaking time is 28.6, Cohen's $d$ for the estimated effect is around 0.1, typically classified as a `small' effect \citep{Cohen1992}. This corresponds well to the intuitive sense that 3 seconds out of a speech of around 60 seconds is indeed a relatively small fraction. At the same time, this characterization somewhat understates the magnitude of the effect, since it ignores the repeated nature of the speeches. Given that each chairman oversees 128 speeches per debate on average, the cumulative speaking time bias per chairman per debate comes to around six minutes. In other words, though the speaking time bias is small at the level of the individual speech, it adds up when viewed from the perspective of each chairman. At the same time, the continual rotation of chairmen means that in the aggregate, the these biases are likely to roughly cancel out. Overall, the magnitude of bias would seem to be best characterized as small, but non-negligible.
 
 \subsection{Political moderators: Distance or party group affiliation? }\label{polmod}
 
-Having established the presence of biased rule enforcement, we return to the question outlined in the introduction: what is the most plausible psychological mechanism? As a way of getting at this question, we test if chairmen appear responsive to variation in the political affiliation of speakers which should be relevant to a politically strategic actor. If the partisan governance account is correct, chairmen would plausibly be most strongly biased against politically distant speakers. Conversely, if the social identity account is correct, chairmen would presumably treat non-copartisans roughly equally, seeing as they are all out-group members, irrespective of political distance. 
+Having established the presence of biased rule enforcement, we return to the question outlined in the introduction: what is the most plausible psychological mechanism? As a way of getting at this question, we test if chairmen appear responsive to variation in the political affiliation of speakers which should be relevant to a politically strategic actor. If the partisan governance account is correct, chairmen would plausibly be most strongly biased against politically distant speakers. Conversely, if the social identity account is correct, chairmen would presumably treat non-copartisans roughly equally, seeing as they are all out-group members, irrespective of political distance. The extent to which the observed effect is moderated by political factors is thus at least suggestive of the mechanism underpinning the observed bias.
 
-The standard way to test if political distance moderates the observed relationship would be to set up an interaction between copartisanship and political distance between chairman and speaker. However, this is statistically infeasible, since copartisanship and political distance are highly conditionally dependent: for all copartisans, political distance is by definition zero, and for all positive values of political distance, copartisanship is by definition zero. Hence, a regression model with copartisanship interacted with political distance is inestimable. \todo{3.1 rewr}
+The standard way to test if political distance moderates the observed relationship would be to set up an interaction between copartisanship and political distance between chairman and speaker. However, this is statistically infeasible, since copartisanship and political distance are highly conditionally dependent: for all copartisans, political distance is by definition zero, and for all positive values of political distance, copartisanship is by definition zero. Hence, a regression model with copartisanship interacted with political distance is inestimable.
 
 We therefore take a different approach, testing the moderating effect of political distance by reestimating the full model (model 4 in table \ref{parlbias_regtab1}) for various subsets of the data where the political distance between chairman and speaker is artificially restricted.  First, we calculate an approximate distance measure based on averaged voter estimates of party positions from the most recent national election survey \citep{Stubager2013}.\footnote{Respondents in the 2011 Danish National Election Study were asked to place parties on a 0 to 10 scale. From left to right, the party position estimates are: Unity List (1.49), Socialist People's Party (2.79), Social Democrats (3.84), Social Liberals (5.01), Liberal Alliance (7.14), Conservative People's Party (7.23), Liberals (7.35), Danish People's Party (7.74)} For each speaker, we calculate the distance measure as the absolute value of the distance between the parties of speaker and chairman. We then reestimate the full model using only data from chairman-speaker pairs where the distance is less than or equal to the median of all observed distances. Second, to test the robustness of the distance measure, we apply a similar restriction using a rank-transformed (ordinal) version of the distance measure. Finally, we also estimate a model restricting the data to cases where the chairman-speaker pair belong to the same political bloc. Table \ref{parlbias_regtabmods} shows the results of each of these restrictions alongside the full model. We plot the estimates in figure \ref{parlbias_modeffectplot}.
 
@@ -242,6 +242,14 @@ However, this empirical result is not necessarily highly informative of the meri
 \subsection{Additional tests}
 
 \todo{explain figs and tabs in appendix}
+
+Section \ref{appact}
+
+Section \ref{approbust}
+
+Section \ref{appchairranef}
+
+
 
 robustness checks
 
@@ -289,23 +297,34 @@ To be sure, the distinction between these two mechanisms is not necessarily a pe
 
 \section{Appendix}
 
-\todo{explain table}
-
 \subsection{Predicting chairman activity}\label{appact}
+
+Here I present results from regression models predicting how many debates chairpersons control. The key result from these models is that the main predictor of number of debates controlled is how long a chairperson has been a member of the leadership. There is an additional small premium for being the head chairperson, which likely reflects the fact that by convention, the president always takes the first shift controlling a debate. In contrast, number of seats has no significant association.
 
 \input{../tables/parlbias_remarksregtab.txt}
 
+Table 1 shows that the main determinant of the number of remarks enforced by a chairmen is chairman's tenure, i.e. for how many debates he or she was in the leadership. In contrast, party seat share is uncorrelated with activity. The results complement the qualitative evidence from correspondence with the parliament leadership that chairperson activity is largely driven by 'supply-side' factors, i.e. chairpersons' availability on the day of the debate, and not by party specific factors such as their parliamentary power.
+
 \clearpage
+
 \subsection{Robustness checks of main results}\label{approbust}
+
+Here we present additional robustness checks of the main results. Table \ref{parlbias_regtabrs} presents results restricting the sample to remarks given by members of parties in the parliamentary leadership (i.e., the five biggest parties by number of seats).
 
 \input{../tables/parlbias_regtabrs.txt}
 
+Table \ref{parlbias_regtabdfe} \todo{finish}
+
 \input{../tables/parlbias_regtabdfe.txt}
+
+Table \ref{parlbias_regtabexpm} \todo{finish}
 
 \input{../tables/parlbias_regtabexpm.txt}
 
 \clearpage
 \subsection{Effect heterogeneity across parties and chairmen}\label{appchairranef}
+
+Here we assess the heterogeneity of the observed effect across parties and individual chairmen. Figure \ref{partyranefs} and Figure \ref{parlbias_chairranfefs} \todo{wrap}.
 
 \begin{figure}[!h]
 \centering

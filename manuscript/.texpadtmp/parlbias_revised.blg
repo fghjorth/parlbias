@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/frederikhjorth/GitHub/parlbias/manuscript/.texpadtmp/parlbias_revised.aux
 The style file: ../../../thesis/bibliography/model2-names.bst
-Illegal, another \bibstyle command---line 122 of file /Users/frederikhjorth/GitHub/parlbias/manuscript/.texpadtmp/parlbias_revised.aux
+Illegal, another \bibstyle command---line 91 of file /Users/frederikhjorth/GitHub/parlbias/manuscript/.texpadtmp/parlbias_revised.aux
  : \bibstyle
  :          {chicago}
 I'm skipping whatever remains of this command

@@ -2,7 +2,7 @@
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
 % Date and time: Tue, Mar 01, 2016 - 21:14:00
 % Requires LaTeX packages: dcolumn 
-\begin{table}[!htbp] \centering 
+\begin{table}[h] \centering 
   \caption{Results excluding prime ministers} 
   \label{parlbias_regtabexpm} 
 \footnotesize 

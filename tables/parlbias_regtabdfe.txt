@@ -2,7 +2,7 @@
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
 % Date and time: ma, feb 29, 2016 - 11:36:18
 % Requires LaTeX packages: dcolumn 
-\begin{table}[!htbp] \centering 
+\begin{table}[h] \centering 
   \caption{Results with debate-specific fixed effects} 
   \label{parlbias_regtabdfe} 
 \footnotesize 
