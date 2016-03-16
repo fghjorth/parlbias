@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.23)  16 MAR 2016 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.23)  16 MAR 2016 16:18
 entering extended mode
 **parlbias_revised.tex
 (parlbias_revised.tex
@@ -1142,13 +1142,33 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 45.
 
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 45.
 
-LaTeX Warning: No \author given.
-
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 57.
-[1
+ [1
 
 {C:/Users/fh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
@@ -1159,31 +1179,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
- [2] [3]
-[4]
+ [2] [3] [4]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 112.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 112.
- [5] [6] [7] [8]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 154.
-
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-[9] (../tables/parlbias_sumstatstab_edited.txt) [10]
-<../figures/parlbias_dens.pdf, id=241, 650.43pt x 361.35pt>
+ [5] [6] [7] [8] [9]
+(../tables/parlbias_sumstatstab_edited.txt) [10]
+<../figures/parlbias_dens.pdf, id=244, 650.43pt x 361.35pt>
 File: ../figures/parlbias_dens.pdf Graphic file (type pdf)
 
 <use ../figures/parlbias_dens.pdf>
@@ -1203,7 +1206,7 @@ Overfull \hbox (35.82011pt too wide) in paragraph at lines 9--33
  []
 
 ) [12 <../figures/parlbias_dens.pdf>] [13] (../tables/parlbias_regtab1logit.txt
-) [14] <../figures/parlbias_effectplot.pdf, id=288, 650.43pt x 289.08pt>
+) [14] <../figures/parlbias_effectplot.pdf, id=290, 650.43pt x 289.08pt>
 File: ../figures/parlbias_effectplot.pdf Graphic file (type pdf)
 
 <use ../figures/parlbias_effectplot.pdf>
@@ -1216,7 +1219,7 @@ Overfull \hbox (18.7385pt too wide) in paragraph at lines 9--32
  [][] 
  []
 
-) <../figures/parlbias_modeffectplot.pdf, id=313, 650.43pt x 289.08pt>
+) <../figures/parlbias_modeffectplot.pdf, id=315, 650.43pt x 289.08pt>
 File: ../figures/parlbias_modeffectplot.pdf Graphic file (type pdf)
 
 <use ../figures/parlbias_modeffectplot.pdf>
@@ -1253,7 +1256,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ) [26] [27] (../tables/parlbias_remarksregtab.txt) [28
 
 ]
-<../figures/parlbias_partyranefs.pdf, id=398, 650.43pt x 289.08pt>
+<../figures/parlbias_partyranefs.pdf, id=400, 650.43pt x 289.08pt>
 File: ../figures/parlbias_partyranefs.pdf Graphic file (type pdf)
 
 <use ../figures/parlbias_partyranefs.pdf>
@@ -1261,7 +1264,7 @@ Package pdftex.def Info: ../figures/parlbias_partyranefs.pdf used on input line
  327.
 (pdftex.def)             Requested size: 357.7376pt x 158.99448pt.
 
-<../figures/parlbias_chairranefs.pdf, id=400, 650.43pt x 433.62pt>
+<../figures/parlbias_chairranefs.pdf, id=402, 650.43pt x 433.62pt>
 File: ../figures/parlbias_chairranefs.pdf Graphic file (type pdf)
 
 <use ../figures/parlbias_chairranefs.pdf>
@@ -1286,27 +1289,28 @@ Package rerunfilecheck Info: File `parlbias_revised.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
  ) 
 Here is how much of TeX's memory you used:
- 21063 strings out of 493636
- 380464 string characters out of 3143764
- 491402 words of memory out of 3000000
- 23660 multiletter control sequences out of 15000+200000
- 90823 words of font info for 289 fonts, out of 3000000 for 9000
+ 21090 strings out of 493636
+ 380896 string characters out of 3143764
+ 491591 words of memory out of 3000000
+ 23678 multiletter control sequences out of 15000+200000
+ 92290 words of font info for 293 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,16n,92p,1631b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb
-i8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on parlbias_revised.pdf (30 pages, 283093 bytes).
+ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
+mes/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on parlbias_revised.pdf (30 pages, 292070 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
+ 486 PDF objects out of 1000 (max. 8388607)
  100 named destinations out of 1000 (max. 500000)
- 48326 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 50374 words of extra memory for PDF output out of 51595 (max. 10000000)
 

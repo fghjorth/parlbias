@@ -7,12 +7,10 @@ header-includes:
   - \usepackage{tgtermes}
   - \usepackage[margin=1.2in]{geometry}
 title: Revision notes for "Intergroup Bias in Parliamentary Rule Enforcement"
-author: 
+author:
 date: March 16, 2016
 fontsize: 12pt
 ---  
-
-# Revision memo
 
 Dear Editors of Political Research Quarterly,
 
