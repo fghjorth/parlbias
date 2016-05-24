@@ -1,3 +1,5 @@
+\def
+\endnoteN{1}
 \@doanenote {1}
 macro:->In
 the
@@ -21,6 +23,8 @@ modal
 speaker
 gender.
 \@endanenote 
+\def
+\endnoteN{2}
 \@doanenote {2}
 macro:->The
 source
@@ -44,6 +48,8 @@ with
 legal
 office.
 \@endanenote 
+\def
+\endnoteN{3}
 \@doanenote {3}
 macro:->The
 distinction
@@ -69,6 +75,8 @@ and
 rule
 enforcement.
 \@endanenote 
+\def
+\endnoteN{4}
 \@doanenote {4}
 macro:->Available
 upon
@@ -77,6 +85,8 @@ at
 \url
 {http://github.com/fghjorth/parlbias}.
 \@endanenote 
+\def
+\endnoteN{5}
 \@doanenote {5}
 macro:->Respondents
 in

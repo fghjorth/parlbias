@@ -1,34 +1,34 @@
 \begin{figure}[h]
 \centering
-\includegraphics[scale=.70]{../figures/parlbias_dens}
+\includegraphics[scale=.70]{../figures/parlbias_dens.png}
   \caption{Distribution of speaking times for non-copartisans outside of the chairman's political bloc (left panel), non-copartisans from the chairman's own political bloc (middle panel) and copartisans (right panel). The dashed vertical line indicates the 60-second limit for short speeches. Non-copartisans drop off before reaching the limit. No such pattern is apparent for copartisans.}\label{parlbias_dens}
 \end{figure}
 \efloatseparator
  
 \begin{figure}[!htbp]
 \centering
-\includegraphics[scale=.65]{../figures/parlbias_effectplot}
+\includegraphics[scale=.65]{../figures/parlbias_effectplot.png}
   \caption{Estimated effect of copartisanship on speaking time (left panel) and probability of exceeding 60 seconds (right panel) for each of the five models estimated. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals. Logit model estimates represent marginal effects expressed in percentage points.}\label{parlbias_effectplot}
 \end{figure}
 \efloatseparator
  
 \begin{figure}[!htbp]
 \centering
-\includegraphics[scale=.65]{../figures/parlbias_modeffectplot}
+\includegraphics[scale=.15]{../figures/parlbias_modeffectplot.png}
   \caption{Estimated effect of copartisanship on speaking time under various restrictions on political distance between chairman and speaker. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}\label{parlbias_modeffectplot}
 \end{figure}
 \efloatseparator
  
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=.55]{../figures/parlbias_partyranefs.pdf}
+\includegraphics[scale=.55]{../figures/parlbias_partyranefs.png}
 \caption{Effects of copartisanship estimated separately for each chairman's party. Estimates are drawn from a random effects model corresponding to model 3 in Table 2 with varying slopes for chairman party. The grey dashed vertical line shows the average copartisanship effect (i.e., the fixed effect). Parties are ordered top to bottom according to party ordinal left/right ranking. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}\label{partyranefs}
 \end{figure}
 \efloatseparator
  
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=.55]{../figures/parlbias_chairranefs}
+\includegraphics[scale=.55]{../figures/parlbias_chairranefs.png}
   \caption{Effects of copartisanship estimated separately for each chairman in the data. Estimates are drawn from a random effects model corresponding to model 3 in Table 2 with varying slopes for individual chairmen. The grey dashed vertical line shows the average copartisanship effect (i.e., the fixed effect). Chairmen are ordered top to bottom according to party ordinal left/right ranking and within parties according to estimated effect. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}\label{parlbias_chairranfefs}
 \end{figure}
 \efloatseparator

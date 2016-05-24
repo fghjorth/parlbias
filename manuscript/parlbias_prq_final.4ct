@@ -1,0 +1,39 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Introduction}}{5}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Existing literature}}{6}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-30003}{QQ2-1-3}{Empirical setting}}{9}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-40003.1}{QQ2-1-4}{Parliamentary debates in the \textit  {Folketing}}}{9}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-50003.2}{QQ2-1-5}{Denmark as `least likely' setting}}{10}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-60003.3}{QQ2-1-6}{Hypothesis}}{11}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-70004}{QQ2-1-7}{Data and measurement}}{13}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-80004.1}{QQ2-1-8}{Obtaining speech data}}{13}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-90004.2}{QQ2-1-9}{Summary statistics}}{14}\relax 
+\doTocEntry\tocsubsection{4.3}{\csname a:TocLink\endcsname{1}{x1-100004.3}{QQ2-1-10}{Modeling strategy}}{14}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-110005}{QQ2-1-11}{Results}}{15}\relax 
+\doTocEntry\tocsubsection{5.1}{\csname a:TocLink\endcsname{1}{x1-120005.1}{QQ2-1-12}{Robustness check: binary speaking time measure}}{17}\relax 
+\doTocEntry\tocsubsection{5.2}{\csname a:TocLink\endcsname{1}{x1-130005.2}{QQ2-1-13}{Making sense of the magnitude of bias}}{18}\relax 
+\doTocEntry\tocsubsection{5.3}{\csname a:TocLink\endcsname{1}{x1-140005.3}{QQ2-1-14}{Political moderators: Distance or party group affiliation? }}{19}\relax 
+\doTocEntry\tocsubsection{5.4}{\csname a:TocLink\endcsname{1}{x1-150005.4}{QQ2-1-15}{Additional tests}}{22}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-160006}{QQ2-1-16}{Conclusion}}{22}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-170006}{QQ2-1-17}{Notes}}{26}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-180006}{QQ2-1-18}{References}}{27}\relax 
+\doTocEntry\tocsection{A}{\csname a:TocLink\endcsname{1}{x1-19000A}{QQ2-1-19}{Appendix}}{34}\relax 
+\doTocEntry\tocsubsection{A.1}{\csname a:TocLink\endcsname{1}{x1-20000A.1}{QQ2-1-20}{Robustness checks of main results}}{34}\relax 
+\doTocEntry\tocsubsection{A.2}{\csname a:TocLink\endcsname{1}{x1-21000A.2}{QQ2-1-21}{Predicting chairman activity}}{36}\relax 
+\doTocEntry\tocsubsection{A.3}{\csname a:TocLink\endcsname{1}{x1-22000A.3}{QQ2-1-22}{Effect heterogeneity across parties and chairmen}}{37}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-23000A.3}{QQ2-1-23}{Tables}}{39}\relax 
+\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-230011}{}{\ignorespaces Types of speeches in opening and closing debates in the Folketing}}{table}\relax 
+\doTocEntry\toclot{2}{\csname a:TocLink\endcsname{1}{x1-230022}{}{\ignorespaces OLS models of speaking time}}{table}\relax 
+\doTocEntry\toclot{3}{\csname a:TocLink\endcsname{1}{x1-230033}{}{\ignorespaces Logit models of exceeding standard speaking time}}{table}\relax 
+\doTocEntry\toclot{4}{\csname a:TocLink\endcsname{1}{x1-230044}{}{\ignorespaces Tests of political moderators}}{table}\relax 
+\doTocEntry\toclot{5}{\csname a:TocLink\endcsname{1}{x1-230055}{}{\ignorespaces Results for only members of leadership parties}}{table}\relax 
+\doTocEntry\toclot{6}{\csname a:TocLink\endcsname{1}{x1-230066}{}{\ignorespaces Results excluding prime ministers}}{table}\relax 
+\doTocEntry\toclot{7}{\csname a:TocLink\endcsname{1}{x1-230077}{}{\ignorespaces Results with debate-specific fixed effects}}{table}\relax 
+\doTocEntry\toclot{8}{\csname a:TocLink\endcsname{1}{x1-230088}{}{\ignorespaces Model predicting number of remarks enforced by chairmen}}{table}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-24000A.3}{QQ2-1-32}{Figures}}{72}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-240011}{}{\ignorespaces Distribution of speaking times for non-copartisans outside of the chairman's political bloc (left panel), non-copartisans from the chairman's own political bloc (middle panel) and copartisans (right panel). The dashed vertical line indicates the 60-second limit for short speeches. Non-copartisans drop off before reaching the limit. No such pattern is apparent for copartisans.}}{figure}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-240022}{}{\ignorespaces Estimated effect of copartisanship on speaking time (left panel) and probability of exceeding 60 seconds (right panel) for each of the five models estimated. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals. Logit model estimates represent marginal effects expressed in percentage points.}}{figure}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-240033}{}{\ignorespaces Estimated effect of copartisanship on speaking time under various restrictions on political distance between chairman and speaker. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}}{figure}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-240044}{}{\ignorespaces Effects of copartisanship estimated separately for each chairman's party. Estimates are drawn from a random effects model corresponding to model 3 in Table 2 with varying slopes for chairman party. The grey dashed vertical line shows the average copartisanship effect (i.e., the fixed effect). Parties are ordered top to bottom according to party ordinal left/right ranking. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}}{figure}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-240055}{}{\ignorespaces Effects of copartisanship estimated separately for each chairman in the data. Estimates are drawn from a random effects model corresponding to model 3 in Table 2 with varying slopes for individual chairmen. The grey dashed vertical line shows the average copartisanship effect (i.e., the fixed effect). Chairmen are ordered top to bottom according to party ordinal left/right ranking and within parties according to estimated effect. Error bars represent 90 percent (thick lines) and 95 percent (thin lines) confidence intervals.}}{figure}\relax 
+\par 
