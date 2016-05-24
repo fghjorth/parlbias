@@ -13,9 +13,9 @@ require(rms)
 require(mfx)
 
 #win
-#setwd("C:/Users/fh/Documents/GitHub/parlbias/data")
+setwd("C:/Users/fh/Documents/GitHub/parlbias/data")
 #mac
-setwd("~/GitHub/parlbias/data")
+#setwd("~/GitHub/parlbias/data")
 
 ftall<-readRDS("ftall.rds")
 
@@ -38,8 +38,8 @@ ft<-arrange(ft,starttime)
 m1<-lm(m1f<-as.formula(secs~copartisan),data=ft)
 m2<-lm(m2f<-as.formula(secs~copartisan+timeofday),data=ft)
 m3<-lm(m3f<-as.formula(secs~copartisan+timeofday+female+debatetype),data=ft)
-m4<-lm(m4f<-as.formula(secs~copartisan+timeofday+female+debatetype+factor(coarseparty)),data=ft)
-m5<-lm(m5f<-as.formula(secs~copartisan+timeofday+female+debatetype+factor(coarseparty)+factor(chairparty)),data=ft)
+m4<-lm(m4f<-as.formula(secs~copartisan+timeofday+female+debatetype+coarseparty),data=ft)
+m5<-lm(m5f<-as.formula(secs~copartisan+timeofday+female+debatetype+coarseparty+chairparty),data=ft)
 
 stargazer(m1,m2,m3,m4,m5,type="text",omit=c("factor","debate"),omit.stat=c("f","ser"))
 stargazer(m1,m2,m3,m4,m5,type="text",omit=c("debate"),omit.stat=c("f","ser"))
@@ -158,8 +158,8 @@ m5robrs<-robcov(ols(m5f,data=subset(ft,leadshipparty==1),x=T,y=T),cluster=subset
 m1fdfe<-as.formula(secs~copartisan+debate)
 m2fdfe<-as.formula(secs~copartisan+timeofday+debate)
 m3fdfe<-as.formula(secs~copartisan+timeofday+female+debate)
-m4fdfe<-as.formula(secs~copartisan+timeofday+female+factor(coarseparty)+debate)
-m5fdfe<-as.formula(secs~copartisan+timeofday+female+factor(coarseparty)+factor(chairparty)+debate)
+m4fdfe<-as.formula(secs~copartisan+timeofday+female+coarseparty+debate)
+m5fdfe<-as.formula(secs~copartisan+timeofday+female+coarseparty+chairparty+debate)
 
 m1robdfe<-robcov(ols(m1fdfe,data=ft,x=T,y=T),cluster=ft$chairname)
 m2robdfe<-robcov(ols(m2fdfe,data=ft,x=T,y=T),cluster=ft$chairname)
@@ -358,6 +358,7 @@ ggplot(effectests,aes(x=est,y=reorder(model,rep(5:1,2)))) +
         panel.border = element_rect(colour = "black"))
 
 ggsave(file="../figures/parlbias_effectplot.pdf",height=4,width=9)
+ggsave(file="../figures/parlbias_effectplot.png",height=4,width=9)
 
 ggplot(modeffectests,aes(x=est,y=reorder(model,c(4,3,2,1)))) +
   geom_point(size=2.5) +
@@ -374,6 +375,7 @@ ggplot(modeffectests,aes(x=est,y=reorder(model,c(4,3,2,1)))) +
         panel.border = element_rect(colour = "black"))
 
 ggsave(file="../figures/parlbias_modeffectplot.pdf",height=4,width=9)
+ggsave(file="../figures/parlbias_modeffectplot.png",height=4,width=9)
 
 #factors for copartisanship
 ft$copartisan_factor<-factor(ft$copartisan,labels=c("Non-copartisan","Co-partisan"))
@@ -397,6 +399,7 @@ ggplot(subset(ft,chair==0 & !is.na(copartisancobloc)),aes(x=secs)) +
         panel.border = element_rect(colour = "black"))
 
 ggsave(file="../figures/parlbias_dens.pdf",height=5,width=9)
+ggsave(file="../figures/parlbias_dens.png",height=5,width=9)
 
 ## varying coefficients by party
 
@@ -416,6 +419,7 @@ ggplot(subset(partyranefs,party!="Other"),aes(x=coef,y=reorder(party,-ordpos))) 
         panel.border = element_rect(colour = "black"))
 
 ggsave(file="../figures/parlbias_partyranefs.pdf",height=4,width=9)
+ggsave(file="../figures/parlbias_partyranefs.png",height=4,width=9)
 
 ## varying coefficients by chairman
 
@@ -435,6 +439,7 @@ ggplot(chairranefs,aes(x=coef,y=reorder(chairparty,-chairorder))) +
         panel.border = element_rect(colour = "black"))
 
 ggsave(file="../figures/parlbias_chairranefs.pdf",height=6,width=9)
+ggsave(file="../figures/parlbias_chairranefs.png",height=6,width=9)
 
 
 # estimate coefficient excluding each chairman
@@ -454,6 +459,7 @@ ggplot(allchairmen,aes(x=exest,y=chairname)) +
         panel.border = element_rect(colour = "black"))
 
 ggsave(file="../figures/parlbias_exchairests.pdf",height=6,width=9)
+ggsave(file="../figures/parlbias_exchairests.png",height=6,width=9)
 
 ## plot predicted remarks presided over
 seatsprdf1<-data.frame(expand.grid(debates=1:9,president=0:1,avgseats=21)) %>%
