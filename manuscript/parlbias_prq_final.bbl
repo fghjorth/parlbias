@@ -1,0 +1,224 @@
+\begin{thebibliography}{29}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Book
+\bibitem[{Abrams and Hogg(1990)}]{Abrams1990}
+\bibinfo{author}{Abrams, D.}, \bibinfo{author}{Hogg, M.A.},
+  \bibinfo{year}{1990}.
+\newblock \bibinfo{title}{{Social identity theory: Constructive and critical
+  advances.}}
+\newblock \bibinfo{publisher}{Springer-Verlag}, \bibinfo{address}{New York}.
+%Type = Article
+\bibitem[{Antonovics and Knight(2009)}]{Antonovics2009}
+\bibinfo{author}{Antonovics, K.}, \bibinfo{author}{Knight, B.G.},
+  \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{{A New Look at Racial Profiling: Evidence from the
+  Boston Police Department}}.
+\newblock \bibinfo{journal}{Review of Economics and Statistics}
+  \bibinfo{volume}{91}, \bibinfo{pages}{163--177}.
+%Type = Article
+\bibitem[{Anwar et~al.(2012)Anwar, Bayer and Hjalmarsson}]{Anwar2012}
+\bibinfo{author}{Anwar, S.}, \bibinfo{author}{Bayer, P.},
+  \bibinfo{author}{Hjalmarsson, R.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{{The Impact of Jury Race in Criminal Trials}}.
+\newblock \bibinfo{journal}{The Quarterly Journal of Economics}
+  \bibinfo{volume}{127}, \bibinfo{pages}{1017--1055}.
+%Type = Article
+\bibitem[{Brewer(1979)}]{Brewer1979}
+\bibinfo{author}{Brewer, M.B.}, \bibinfo{year}{1979}.
+\newblock \bibinfo{title}{{In-group bias in the minimal intergroup situation: A
+  cognitive-motivational analysis.}}
+\newblock \bibinfo{journal}{Psychological Bulletin} \bibinfo{volume}{86},
+  \bibinfo{pages}{307--324}.
+%Type = Article
+\bibitem[{Brown(2000)}]{Brown2000}
+\bibinfo{author}{Brown, R.}, \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{{Social identity theory: past achievements, current
+  problems and future challenges}}.
+\newblock \bibinfo{journal}{European Journal of Social Psychology}
+  \bibinfo{volume}{30}, \bibinfo{pages}{745--778}.
+%Type = Article
+\bibitem[{Butler and Broockman(2011)}]{Butler2011}
+\bibinfo{author}{Butler, D.M.}, \bibinfo{author}{Broockman, D.E.},
+  \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{{Do Politicians Racially Discriminate Against
+  Constituents? A Field Experiment on State Legislators}}.
+\newblock \bibinfo{journal}{American Journal of Political Science}
+  \bibinfo{volume}{55}, \bibinfo{pages}{463--477}.
+%Type = Article
+\bibitem[{Chen and Li(2009)}]{Chen2009}
+\bibinfo{author}{Chen, Y.}, \bibinfo{author}{Li, S.X.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{{Group Identity and Social Preferences}}.
+\newblock \bibinfo{journal}{The American Economic Review} \bibinfo{volume}{99},
+  \bibinfo{pages}{27}.
+%Type = Article
+\bibitem[{Cohen(1992)}]{Cohen1992}
+\bibinfo{author}{Cohen, J.}, \bibinfo{year}{1992}.
+\newblock \bibinfo{title}{{A power primer}}.
+\newblock \bibinfo{journal}{Psychological bulletin} \bibinfo{volume}{112},
+  \bibinfo{pages}{155--9}.
+%Type = Article
+\bibitem[{Dahlberg and Johansson(2002)}]{Dahlberg2002}
+\bibinfo{author}{Dahlberg, M.}, \bibinfo{author}{Johansson, E.},
+  \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{{On the Vote-Purchasing Behavior of Incumbent
+  Governments}}.
+\newblock \bibinfo{journal}{American Political Science Review}
+  \bibinfo{volume}{96}, \bibinfo{pages}{27--40}.
+%Type = Article
+\bibitem[{Donohue and Levitt(2001)}]{Donohue2001}
+\bibinfo{author}{Donohue, J.J.}, \bibinfo{author}{Levitt, S.D.},
+  \bibinfo{year}{2001}.
+\newblock \bibinfo{title}{{The Impact of Race on Policing and Arrests*}}.
+\newblock \bibinfo{journal}{The Journal of Law and Economics}
+  \bibinfo{volume}{44}, \bibinfo{pages}{367--394}.
+%Type = Article
+\bibitem[{Dunning(2007)}]{Dunning2007}
+\bibinfo{author}{Dunning, T.}, \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{{Improving Causal Inference: Strengths and
+  Limitations of Natural Experiments}}.
+\newblock \bibinfo{journal}{Political Research Quarterly} \bibinfo{volume}{61},
+  \bibinfo{pages}{1065912907306470--293}.
+%Type = Book
+\bibitem[{Esaiasson and Heidar(2000)}]{Esaiasson2000}
+\bibinfo{author}{Esaiasson, P.}, \bibinfo{author}{Heidar, K.},
+  \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{{Beyond Westminster and Congress: The Nordic
+  Experience}}.
+\newblock \bibinfo{publisher}{Ohio State University Press},
+  \bibinfo{address}{Columbus, OH}.
+%Type = Book
+\bibitem[{Gallagher et~al.(2005)Gallagher, Mair and Laver}]{Gallagher2005}
+\bibinfo{author}{Gallagher, M.}, \bibinfo{author}{Mair, P.},
+  \bibinfo{author}{Laver, M.}, \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{{Representative Government in Modern Europe}}.
+\newblock \bibinfo{edition}{4} ed., \bibinfo{publisher}{McGraw-Hill
+  Humanities/Social Sciences/Languages}.
+%Type = Article
+\bibitem[{Gordon(2009)}]{Gordon2009}
+\bibinfo{author}{Gordon, S.C.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{{Assessing Partisan Bias in Federal Public Corruption
+  Prosecutions}}.
+\newblock \bibinfo{journal}{American Political Science Review}
+  \bibinfo{volume}{103}, \bibinfo{pages}{534}.
+%Type = Article
+\bibitem[{Green-Pedersen and Thomsen(2005)}]{Green-Pedersen2005}
+\bibinfo{author}{Green-Pedersen, C.}, \bibinfo{author}{Thomsen, L.H.},
+  \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{{Bloc Politics vs. Broad Cooperation? The functioning
+  of Danish minority parliamentarism}}.
+\newblock \bibinfo{journal}{The Journal of Legislative Studies}
+  \bibinfo{volume}{11}, \bibinfo{pages}{153--169}.
+%Type = Article
+\bibitem[{Habyarimana et~al.(2007)Habyarimana, Humphreys, Posner and
+  Weinstein}]{Habyarimana2007}
+\bibinfo{author}{Habyarimana, J.}, \bibinfo{author}{Humphreys, M.},
+  \bibinfo{author}{Posner, D.N.}, \bibinfo{author}{Weinstein, J.M.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{{Why Does Ethnic Diversity Undermine Public Goods
+  Provision?}}
+\newblock \bibinfo{journal}{American Political Science Review}
+  \bibinfo{volume}{101}.
+%Type = Article
+\bibitem[{Hewstone et~al.(2002)Hewstone, Rubin and Willis}]{Hewstone2002}
+\bibinfo{author}{Hewstone, M.}, \bibinfo{author}{Rubin, M.},
+  \bibinfo{author}{Willis, H.}, \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{{Intergroup bias.}}
+\newblock \bibinfo{journal}{Annual review of psychology} \bibinfo{volume}{53},
+  \bibinfo{pages}{575--604}.
+%Type = Article
+\bibitem[{King(2011)}]{King2011}
+\bibinfo{author}{King, G.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{{Ensuring the data-rich future of the social
+  sciences.}}
+\newblock \bibinfo{journal}{Science (New York, N.Y.)} \bibinfo{volume}{331},
+  \bibinfo{pages}{719--21}.
+%Type = Article
+\bibitem[{Larcinese et~al.(2008)Larcinese, Rizzo and Testa}]{Larcinese2008}
+\bibinfo{author}{Larcinese, V.}, \bibinfo{author}{Rizzo, L.},
+  \bibinfo{author}{Testa, C.}, \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{{Allocating the U.S. Federal Budget to the States:
+  The Impact of the President}}.
+\newblock \bibinfo{journal}{The Journal of Politics} \bibinfo{volume}{68}.
+%Type = Article
+\bibitem[{Levy(2008)}]{Levy2008}
+\bibinfo{author}{Levy, J.}, \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{{Case Studies: Types, Designs, and Logics of
+  Inference}}.
+\newblock \bibinfo{journal}{Conflict Management and Peace Science}
+  \bibinfo{volume}{25}, \bibinfo{pages}{1--18}.
+%Type = Article
+\bibitem[{Lijphart(1999)}]{Lijphart1999}
+\bibinfo{author}{Lijphart, A.}, \bibinfo{year}{1999}.
+\newblock \bibinfo{title}{{Patterns of Democracy}}.
+\newblock \bibinfo{journal}{Yale University Press} , \bibinfo{pages}{143--170}.
+%Type = Article
+\bibitem[{Martin and Vanberg(2008)}]{Martin2008}
+\bibinfo{author}{Martin, L.W.}, \bibinfo{author}{Vanberg, G.},
+  \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{{Coalition Government and Political Communication}}.
+\newblock \bibinfo{journal}{Political Research Quarterly} \bibinfo{volume}{61},
+  \bibinfo{pages}{502--516}.
+%Type = Article
+\bibitem[{Price and Wolfers(2010)}]{Price2010}
+\bibinfo{author}{Price, J.}, \bibinfo{author}{Wolfers, J.},
+  \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{{Racial Discrimination Among NBA Referees}}.
+\newblock \bibinfo{journal}{The Quarterly Journal of Economics}
+  \bibinfo{volume}{125}, \bibinfo{pages}{1859--1887}.
+%Type = Misc
+\bibitem[{{R Core Team}(2013)}]{RDevelopmentCoreTeam2011}
+\bibinfo{author}{{R Core Team}, R.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{{R: A Language and Environment for Statistical
+  Computing}}.
+\newblock \URLprefix \url{http://www.r-project.org},
+  \DOIprefix\doi{10.1007/978-3-540-74686-7}.
+%Type = Article
+\bibitem[{Stratmann and Baur(2002)}]{Stratmann2002}
+\bibinfo{author}{Stratmann, T.}, \bibinfo{author}{Baur, M.},
+  \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{{Plurality Rule, Proportional Representation, and the
+  German Bundestag: How Incentives to Pork-Barrel Differ Across Electoral
+  Systems}}.
+\newblock \bibinfo{journal}{American Journal of Political Science}
+  \bibinfo{volume}{46}, \bibinfo{pages}{506--514}.
+%Type = Book
+\bibitem[{Stubager et~al.(2013)Stubager, Hansen and Andersen}]{Stubager2013}
+\bibinfo{author}{Stubager, R.}, \bibinfo{author}{Hansen, K.M.},
+  \bibinfo{author}{Andersen, J.G.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{{Krisevalg. {\O}konomien og folketingsvalget 2011}}.
+\newblock \bibinfo{publisher}{Jurist- og {\O}konomforbundets Forlag},
+  \bibinfo{address}{K{\o}benhavn}.
+%Type = Incollection
+\bibitem[{Tajfel and Turner(1979)}]{Tajfel1979}
+\bibinfo{author}{Tajfel, H.}, \bibinfo{author}{Turner, J.C.},
+  \bibinfo{year}{1979}.
+\newblock \bibinfo{title}{{An integrative theory of intergroup conflict}}, in:
+  \bibinfo{editor}{Austin, W.G.}, \bibinfo{editor}{Worchel, S.} (Eds.),
+  \bibinfo{booktitle}{Differentiation between social groups: Studies in the
+  social psychology of intergroup relations}. \bibinfo{publisher}{Brooks/Cole},
+  pp. \bibinfo{pages}{33--47}.
+%Type = Incollection
+\bibitem[{Tajfel and Turner(1986)}]{Tajfel1986}
+\bibinfo{author}{Tajfel, H.}, \bibinfo{author}{Turner, J.C.},
+  \bibinfo{year}{1986}.
+\newblock \bibinfo{title}{{The social identity theory of intergroup behavior}},
+  \bibinfo{publisher}{Nelson-Hall Publishers}, pp. \bibinfo{pages}{7--24}.
+%Type = Article
+\bibitem[{Treisman(2000)}]{Treisman2000}
+\bibinfo{author}{Treisman, D.}, \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{{The causes of corruption: a cross-national study}}.
+\newblock \bibinfo{journal}{Journal of Public Economics} \bibinfo{volume}{76},
+  \bibinfo{pages}{399--457}.
+
+\end{thebibliography}
