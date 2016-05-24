@@ -13,9 +13,9 @@ require(rms)
 require(mfx)
 
 #win
-setwd("C:/Users/fh/Documents/GitHub/parlbias/data")
+#setwd("C:/Users/fh/Documents/GitHub/parlbias/data")
 #mac
-#setwd("~/GitHub/parlbias/data")
+setwd("~/GitHub/parlbias/data")
 
 ftall<-readRDS("ftall.rds")
 
@@ -245,10 +245,16 @@ regtabmods
 writeLines(regtabmods,con="../tables/parlbias_regtabmods.txt")
 
 modeffectests<-data.frame(est=rep(NA,4),se=rep(NA,4),model=modscolumnlabels)
-modeffectests[1,1:2]<-tidy(m5)[2,2:3]
-modeffectests[2,1:2]<-tidy(m5intposdifltmedian)[2,2:3]
-modeffectests[3,1:2]<-tidy(m5ordposdifltmedian)[2,2:3]
-modeffectests[4,1:2]<-tidy(m5cobloc)[2,2:3]
+
+#get coef and se on copartisan for each model
+modeffectms<-list(m5rob,m5intposdifltmedian,m5ordposdifltmedian,m5cobloc)
+
+for (i in 1:4){
+  modeffectests[i,1]<-coef(modeffectms[[i]])["copartisan"]
+  modeffectests[i,2]<-sqrt(diag(modeffectms[[i]]$var))["copartisan"]
+}
+
+modeffectests
 
 #sub in <= for latex symbols
 modeffectests$model<-modeffectests$model %>%
