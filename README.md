@@ -1,5 +1,3 @@
-# parlbias
-
 This repo contains reproduction materials for "Intergroup Bias in Parliamentary Rule Enforcement", forthcoming in *Political Research Quarterly*. The materials are organized in the following folders:
 
 `analysis` - R scripts for analyzing the data
