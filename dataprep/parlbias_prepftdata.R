@@ -42,8 +42,6 @@ ft$chairname<-ifelse(ft$chair==1,as.character(ft$fullname),NA)
 ft$chairparty<-na.locf(ft$chairparty)
 ft$chairname<-na.locf(ft$chairname)
 
-
-
 #variable for whether the speaker is ingroup wrt the chairman
 ft$copartisan<-ifelse(as.character(ft$party)==ft$chairparty,1,0)
 ft$copartisan<-ifelse(ft$chair==1,NA,ft$copartisan)
@@ -168,11 +166,10 @@ polsgenders2<-read_csv("../rawdata/polsgenders2.csv")
 #merge in
 ft<-left_join(ft,polsgenders2,by="fullname")
 
-# #calculate age in years at time of speaking
-# ft$speakerage<-(year(ft$starttime)+month(ft$starttime)/12)-(year(ymd(ft$birthday))+month(ymd(ft$birthday))/12)  
-
-
 #save version for easy reload
-ftall<-ft
-saveRDS(ftall,"ftall.rds")
-write_csv(ftall,"ftall.csv")
+ft<-ft %>%
+  filter(secs<150 & secs>10 & year(starttime)>2000) %>% 
+  arrange(starttime)
+
+saveRDS(ft,"ft.rds")
+write_csv(ft,"ft.csv")

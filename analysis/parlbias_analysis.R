@@ -17,22 +17,9 @@ require(mfx)
 #mac
 setwd("~/GitHub/parlbias/data")
 
-ftall<-readRDS("ftall.rds")
+### READ IN DATA
 
-#remove very short and very long speeches
-ft<-subset(ftall,secs<150 & secs>10 & year(starttime)>2000)
-ft<-arrange(ft,starttime)
-summary(ft)
-
-#magnitude check
-sd(ft$secs,na.rm=T)
-3/sd(ft$secs,na.rm=T)
-# #check sample of data
-# sample_n(ft,30)
-# ggplot(subset(ft,chair==0),aes(x=secs)) + geom_density()
-# ggplot(ft,aes(x=timeofday,y=secs)) + geom_point() + facet_grid(debate~.)
-
-
+ft<-readRDS("ft.rds")
 
 
 ### REGRESSION MODELS
@@ -109,6 +96,10 @@ effectests[7,1:2]<-logitmfx(m2.logit$formula,data=ft)$mfxest[1,1:2]*100
 effectests[8,1:2]<-logitmfx(m3.logit$formula,data=ft)$mfxest[1,1:2]*100
 effectests[9,1:2]<-logitmfx(m4.logit$formula,data=ft)$mfxest[1,1:2]*100
 effectests[10,1:2]<-logitmfx(m5.logit$formula,data=ft)$mfxest[1,1:2]*100
+
+#magnitude check
+sd(ft$secs,na.rm=T)
+3/sd(ft$secs,na.rm=T)
 
 #for the main models, cluster observations by presiding chair
 m1rob<-robcov(ols(m1f,data=ft,x=T,y=T),cluster=ft$chairname)
@@ -482,13 +473,5 @@ seatsprdf1<-data.frame(expand.grid(debates=1:9,president=0:1,avgseats=21)) %>%
   dplyr::select(debates,president,fit,se.fit)
 
 
-ggplot(allchairmen,aes(debates,remarks)) + geom_point() + geom_smooth(method="lm")
 
-ggplot(allchairmen,aes(avgseats,remarks)) + geom_point() + geom_smooth(method="lm")
-
-median(allchairmen$avgseats)
-median(allchairmen$debates)
-
-
-### PLOTS
 
