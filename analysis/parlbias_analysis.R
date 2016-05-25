@@ -22,8 +22,11 @@ ftall<-readRDS("ftall.rds")
 #remove very short and very long speeches
 ft<-subset(ftall,secs<150 & secs>10 & year(starttime)>2000)
 ft<-arrange(ft,starttime)
+summary(ft)
 
-
+#magnitude check
+sd(ft$secs,na.rm=T)
+3/sd(ft$secs,na.rm=T)
 # #check sample of data
 # sample_n(ft,30)
 # ggplot(subset(ft,chair==0),aes(x=secs)) + geom_density()
@@ -314,13 +317,17 @@ ftall$type[ftall$secs>=150 & ftall$pm==1]<-"PM speech"
 
 require(dplyr)
 
-totaln<-nrow(subset(ftall,chair==0 & year(starttime)>2000))
-totalsecs<-sum(subset(ftall,chair==0 & year(starttime)>2000)$secs)
+totaln<-nrow(subset(ftall,chair==0 & year(starttime)>2000 & !is.na(type)))
+totalsecs<-sum(subset(ftall,chair==0 & year(starttime)>2000 & !is.na(type))$secs)
 
 options(digits=2)
-sumstatstab<- subset(ftall,chair==0 & year(starttime)>2000) %>%
+sumstatstab<- ftall %>% 
+  filter(chair==0 & year(starttime)>2000) %>%
+  filter(!is.na(type)) %>% 
   group_by(type) %>%
   summarise(count=n(),nshare=100*(count/totaln),secshare=100*sum(secs)/totalsecs)
+
+sumstatstab
 
 #add total line at bottom
 sumstatstab[4,]<-c("Total",colSums(sumstatstab[,2:4]))
@@ -328,6 +335,8 @@ class(sumstatstab$nshare)<-"numeric"
 class(sumstatstab$secshare)<-"numeric"
 sumstatstab$nshare<-as.character(format(sumstatstab$nshare,digits=2))
 sumstatstab$secshare<-as.character(format(sumstatstab$secshare,digits=2))
+
+sumstatstab
 
 str(sumstatstab)
 
