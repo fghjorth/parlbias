@@ -1,8 +1,8 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: ma, feb 29, 2016 - 11:36:18
+% Date and time: Sun, Jul 10, 2016 - 19:34:23
 % Requires LaTeX packages: dcolumn 
-\begin{table}[h] \centering 
+\begin{table}[!htbp] \centering 
   \caption{Results with debate-specific fixed effects} 
   \label{parlbias_regtabdfe} 
 \footnotesize 

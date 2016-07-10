@@ -1,8 +1,8 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: ma, feb 29, 2016 - 11:36:17
+% Date and time: Sun, Jul 10, 2016 - 19:34:22
 % Requires LaTeX packages: dcolumn 
-\begin{table}[h] \centering 
+\begin{table}[!htbp] \centering 
   \caption{Results for only members of leadership parties} 
   \label{parlbias_regtabrs} 
 \footnotesize 
@@ -22,7 +22,7 @@
   Intercept & 52.02^{***} & 52.51^{***} & 52.35^{***} & 58.26^{***} & 57.10^{***} \\ 
   & (0.93) & (2.90) & (3.13) & (3.54) & (4.92) \\ 
  N & \multicolumn{1}{c}{5,528} & \multicolumn{1}{c}{5,528} & \multicolumn{1}{c}{5,528} & \multicolumn{1}{c}{5,528} & \multicolumn{1}{c}{5,528} \\ 
-Speaker party FE & & & $\checkmark$ & & $\checkmark$ \\
+Speaker party FE & & & & $\checkmark$ & $\checkmark$ \\
 Chair party FE & & & & & $\checkmark$ \\
 R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.03} & \multicolumn{1}{c}{0.05} \\ 
 Adjusted R$^{2}$ & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.03} & \multicolumn{1}{c}{0.04} \\ 

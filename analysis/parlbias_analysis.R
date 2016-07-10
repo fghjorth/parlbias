@@ -222,7 +222,7 @@ regtab1logit
 regtab1logit<-c(regtab1logit[1:22],checkmarks,regtab1logit[23:length(regtab1logit)])
 writeLines(regtab1logit,con="../tables/parlbias_regtab1logit.txt")
 
-modscolumnlabels<-c("Full","Distance$\\leq$median (int.)","Distance$\\leq$median (ord.)","Same bloc")
+modscolumnlabels<-c("Full","Distance$\\leq$median (interval)","Distance$\\leq$median (ordinal)","Same bloc")
 
 modscheckmarks<-c("Speaker party FE & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ \\\\", "Chair party FE & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ \\\\")
 #, "Debate FE & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ & $\\checkmark$ \\\\")

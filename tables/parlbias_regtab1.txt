@@ -1,6 +1,6 @@
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: ma, feb 29, 2016 - 13:52:23
+% Date and time: Sun, Jul 10, 2016 - 19:34:20
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{OLS models of speaking time} 
