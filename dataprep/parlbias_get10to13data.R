@@ -6,7 +6,7 @@ library(reshape2)
 library(effects)
 
 #win
-setwd("C:/Users/fh/Documents/GitHub/thesis/rawdata")
+setwd("~/GitHub/parlbias/rawdata")
 #mac
 #setwd("~/Google Drive/InProgress/ParliamentBias")
 
@@ -141,10 +141,11 @@ strsplit(ftab[20],",")[[1]][5]
 strsplit(ftab[20],",")[[1]][6]
 
 for (i in 1:nrow(ftdt)){
-  ftdt$statxt[i]<-strsplit(ftab[i],",")[[1]][3]
-  ftdt$endtxt[i]<-strsplit(ftab[i],",")[[1]][4]
-  ftdt$spktxt[i]<-strsplit(ftab[i],",")[[1]][5]
-  ftdt$type[i]<-strsplit(ftab[i],",")[[1]][6]
+  splitstring<-strsplit(ftab[i],",")[[1]]
+  ftdt$statxt[i]<-splitstring[3]
+  ftdt$endtxt[i]<-splitstring[4]
+  ftdt$spktxt[i]<-splitstring[5]
+  ftdt$type[i]<-splitstring[6]
 }
 
 #reformat non-ascii letters - we need this for later
